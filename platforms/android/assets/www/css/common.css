@@ -1,0 +1,108 @@
+article,aside,canvas,details,figcaption,figure,
+header,footer,main,menu,nav,section,summary {
+	display: block;
+}
+
+body {
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	border: none;
+}
+
+#home {
+  background-image: url(../img/001_top/bgi_sample.jpg);
+  background-position: center top;
+	color: #FFF;
+}
+
+#home header{
+	vertical-align: bottom;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.mypage{
+	vertical-align: top;
+	padding: 5px;
+}
+
+#tutorial,#home article{
+	text-align: center;
+	padding-top: 20px;
+	margin:25px;
+}
+
+#tutorial h1{
+	color:#888;
+}
+
+#tutorial p{
+	text-align: left;
+}
+
+div.tut_dot{
+	margin-top: 20px;
+}
+
+div.tut_button{
+	background: #EEE;
+	border: 1px solid #DDD;
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	color: #FFF;
+	padding: 10px 0;
+	margin: 20px 50px;
+	text-align: center;
+}
+
+
+section.menu01{
+	text-align: center;
+	border: 1px solid #FFF;
+	margin-top: 40px;
+}
+
+section.menu02{
+	text-align: center;
+	border: 1px solid #FFF;
+	width: 45%;
+	float: left;
+	margin-top: 20px;
+}
+
+section.menu03{
+	text-align: center;
+	border: 1px solid #FFF;
+	width: 45%;
+	float: right;
+	margin-top: 20px;
+}
+
+#home footer{
+	vertical-align: middle;
+	background-color: #333;
+	color:#FFF;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 99999999999;
+	-moz-opacity:0.9;
+	opacity: 0.9;
+	width: 100%;
+}
+
+
+.mypage_img {
+	vertical-align: middle;
+}
+
+.mypage_txt {
+  font-size: 1.2rem;
+	vertical-align: middle;
+}
