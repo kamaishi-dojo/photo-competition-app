@@ -1,0 +1,79 @@
+article,aside,canvas,details,figcaption,figure,
+header,footer,main,menu,nav,section,summary {
+	display: block;
+}
+
+body {
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#home {
+  background-image: url(../img/001_top/bgi_sample.jpg);
+  background-position: center top;
+	color: #FFF;
+}
+
+#home header{
+	vertical-align: bottom;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.mypage{
+	vertical-align: top;
+	padding: 5px;
+}
+
+#home article{
+	text-align: center;
+	padding-top: 20px;
+	margin:25px;
+}
+
+section.menu01{
+	text-align: center;
+	border: 1px solid #FFF;
+	margin-top: 40px;
+}
+
+section.menu02{
+	text-align: center;
+	border: 1px solid #FFF;
+	width: 45%;
+	float: left;
+	margin-top: 20px;
+}
+
+section.menu03{
+	text-align: center;
+	border: 1px solid #FFF;
+	width: 45%;
+	float: right;
+	margin-top: 20px;
+}
+
+#home footer{
+	vertical-align: middle;
+	background-color: #333;
+	color:#FFF;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 99999999999;
+	-moz-opacity:0.9;
+	opacity: 0.9;
+	width: 100%;
+}
+
+
+.mypage_img {
+	vertical-align: middle;
+}
+
+.mypage_txt {
+  font-size: 1.2rem;
+	vertical-align: middle;
+}
