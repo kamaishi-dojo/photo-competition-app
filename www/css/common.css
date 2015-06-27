@@ -9,6 +9,10 @@ body {
 	padding: 0;
 }
 
+a {
+	border: none;
+}
+
 #home {
   background-image: url(../img/001_top/bgi_sample.jpg);
   background-position: center top;
@@ -26,11 +30,36 @@ body {
 	padding: 5px;
 }
 
-#home article{
+#tutorial,#home article{
 	text-align: center;
 	padding-top: 20px;
 	margin:25px;
 }
+
+#tutorial h1{
+	color:#888;
+}
+
+#tutorial p{
+	text-align: left;
+}
+
+div.tut_dot{
+	margin-top: 20px;
+}
+
+div.tut_button{
+	background: #EEE;
+	border: 1px solid #DDD;
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	color: #FFF;
+	padding: 10px 0;
+	margin: 20px 50px;
+	text-align: center;
+}
+
 
 section.menu01{
 	text-align: center;
