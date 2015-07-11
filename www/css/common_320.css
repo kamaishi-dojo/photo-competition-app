@@ -40,17 +40,16 @@ h1{
 
 #home article{
 	text-align: center;
-	padding-top: 20px;
+	padding-top: 10px;
 	margin:25px;
 }
 
 #home img.home_title{
-	width:80%;
+	width: 60%;
 }
 
 #home a{
 	color: #FFF;
-	text-decoration: none;
 }
 
 #home footer{
@@ -61,7 +60,7 @@ h1{
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	z-index: 5;
+	z-index: 99999999999;
 	-moz-opacity:0.9;
 	opacity: 0.9;
 	width: 100%;
@@ -70,7 +69,7 @@ h1{
 section.menu01{
 	text-align: center;
 	border: 1px solid #FFF;
-	margin-top: 40px;
+	margin-top: 20px;
 }
 
 section.menu02{
