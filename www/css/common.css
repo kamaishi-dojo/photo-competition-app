@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 article,aside,canvas,details,figcaption,figure,
 header,footer,main,menu,nav,section,summary {
 	display: block;
@@ -10,13 +12,24 @@ body {
 }
 
 a {
-	border: none;
+	text-decoration: none;
 }
 
+h1{
+	font-size: 1.5em;
+	margin: 0;
+}
+
+/*ホーム画面*/
 #home {
-  background-image: url(../img/001_top/bgi_sample.jpg);
-  background-position: center top;
+	background-image: url(../img/001_top/bgi_sample.jpg);
+	background-position: center top;
 	color: #FFF;
+}
+
+.mypage{
+	vertical-align: top;
+	padding: 5px;
 }
 
 #home header{
@@ -25,41 +38,25 @@ a {
 	padding-top: 10px;
 }
 
-.mypage{
-	vertical-align: top;
-	padding: 5px;
-}
-
-#tutorial,#home article{
+#home article{
 	text-align: center;
 	padding-top: 20px;
 	margin:25px;
 }
 
-#tutorial h1{
-	color:#888;
-}
-
-#tutorial p{
-	text-align: left;
-}
-
-div.tut_dot{
-	margin-top: 20px;
-}
-
-div.tut_button{
-	background: #EEE;
-	border: 1px solid #DDD;
-	border-radius: 20px;
-	-moz-border-radius: 20px;
-	-webkit-border-radius: 20px;
-	color: #FFF;
-	padding: 10px 0;
-	margin: 20px 50px;
+#home footer{
+	vertical-align: middle;
+	background-color: #333;
+	color:#FFF;
 	text-align: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 99999999999;
+	-moz-opacity:0.9;
+	opacity: 0.9;
+	width: 100%;
 }
-
 
 section.menu01{
 	text-align: center;
@@ -83,26 +80,129 @@ section.menu03{
 	margin-top: 20px;
 }
 
-#home footer{
-	vertical-align: middle;
-	background-color: #333;
-	color:#FFF;
+/*チュートリアル*/
+#tutorial article{
 	text-align: center;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	z-index: 99999999999;
-	-moz-opacity:0.9;
-	opacity: 0.9;
+	padding-top: 20px;
+	margin:25px;
+}
+
+#tutorial h1{
+	color:#888;
+	margin:	10px;
+}
+
+#tutorial p{
+	text-align: left;
+	padding: 0;
+	margin: 0;
+}
+
+div.tut_dot{
+	margin-top: 20px;
+}
+
+div.tut_button{
+	background: #EEE;
+	border: 1px solid #DDD;
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	color: #FFF;
+	padding: 10px 0;
+	margin: 20px 50px;
+	text-align: center;
+}
+
+/*ログイン画面*/
+#login{
+	background: #DDD;
+}
+
+#login header{
+ text-align: center;
+ background-image: url(../img/005_mypage/gr_top.png);
+}
+
+#login h1{
+	color: #FFF;
+	padding-top: 10px;
+}
+
+#login article{
+	padding-top: 20px
+}
+
+img.prof_default {
+  width: 100px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+	margin: 10px 0 -50px 0;
+	display:inline-block!important;
+}
+
+p.caution{
+	padding:0 15px;
+	margin: 0;
+	font-size: 0.8em;
+}
+
+div.profile_change{
+	text-align: center;
+	margin-top: 50px;
+}
+
+div.submit_area{
+	text-align: center;
+}
+
+input.form_area{
+	text-align: left;
 	width: 100%;
+	min-height: 40px;
+	font-size: 1.2rem;
+	margin: 10px 0 20px 0;
+	border: 0;
+	background: #FFF;
 }
 
-
-.mypage_img {
-	vertical-align: middle;
+#login label{
+	text-align: left;
+	padding:0 15px;
 }
 
-.mypage_txt {
-  font-size: 1.2rem;
-	vertical-align: middle;
+input.submit{
+	background: #0f9;
+	border: 1px solid #DDD;
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	color: #FFF;
+	padding: 10px 0;
+	margin: 20px 50px;
+	text-align: center;
+}
+
+/*プレビュー画面*/
+#preview footer{
+vertical-align: middle;
+background-color: #333;
+color:#FFF;
+text-align: center;
+position: fixed;
+bottom: 0;
+left: 0;
+z-index: 99999999999;
+-moz-opacity:0.9;
+opacity: 0.9;
+width: 100%;
+padding: 25px 0;
+}
+
+#preview figure{
+	width: 50%;
+	float: left;
+	padding: 0;
+	margin: 0;
 }
