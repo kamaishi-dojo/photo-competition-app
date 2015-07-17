@@ -19,22 +19,26 @@ $(function() {
 
         // カメラ起動時のオプション
         var options = {
-            quality: 50,
+            quality: 80,
+            allowEdit: false,
             destinationType: Camera.DestinationType.FILE_URI,
-            sourceType: 1,     // 0:Photo Library, 1=Camera, 2=Saved Album
-            encodingType: 0     // 0=JPG 1=PNG
+            sourceType: Camera.PictureSourceType.CAMERA,
+            encodingType: Camera.EncodingType.JPEG
+            // saveToPhotoAlbum: true // アルバムに保存するとトップに戻ってしまう
         };
 
         // カメラを起動
         navigator.camera.getPicture(
             function(fileURL) {
-                var ft = new FileTransfer();
-                ft.upload(fileURL, encodeURI("http://192.168.1.101/upload.php"), win, fail);
+                var permanentStorage = window.localStorage;
+                permanentStorage.setItem('last_taken_file_url', fileURL);
+                location.href = "preview.html";
+                // var ft = new FileTransfer();
+                // ft.upload(fileURL, encodeURI("http://192.168.1.101/upload.php"), win, fail);
             },
             function() {
                 alert('Error taking picture', 'Error');
             },
-
             options
         );
 

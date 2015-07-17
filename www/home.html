@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes">
-<title>ホーム</title>
-<meta name="description" content="">
-<meta name="keywords" content="">
-<link rel="stylesheet" media="(min-height: 480px)" href="css/common.css">
-<link rel="stylesheet" media="(max-height: 480px)" href="css/common_320.css">
-<link rel="stylesheet" href="css/modal.css">
-<script src="js/jquery-2.1.4.min.js"></script>
-<script src="js/modal_windows.js"></script>
-<!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-<![endif]-->
-</head>
-<body id="home">
-<header>
-<a><img src="img/001_top/icon_mypage_w.png" width="20px"><span class="mypage">マイページ</span><img src="img/001_top/icon_mypage_arrow.png" width="8px"></a>
-</header>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes">
+    <title>ホーム</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" media="(min-height: 480px)" href="css/common.css">
+    <link rel="stylesheet" media="(max-height: 480px)" href="css/common_320.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/modal_windows.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/camera.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body id="home">
+    <header>
+      <a><img src="img/001_top/icon_mypage_w.png" width="20px"><span class="mypage">マイページ</span><img src="img/001_top/icon_mypage_arrow.png" width="8px"></a>
+    </header>
 
-<article>
-<img src="img/001_top/top_title.png" class="home_title">
-<a data-target="start" class="modal-open"><section class="menu01"><p><img src="img/001_top/icon_photo.png" width="5%"> 写真を投稿</p></section></a>
-<a href=""><section class="menu02"><p>みんなの投稿</p></section></a>
-<a href=""><section class="menu03"><p>過去のテーマ</p></section></a>
-</article>
-<footer>
-<p>募集期間：2015年8月6日〜8月10日</p>
-</footer>
+    <article>
+      <img src="img/001_top/top_title.png" class="home_title">
+      <a data-target="start" class="modal-open"><section class="menu01"><p><img src="img/001_top/icon_photo.png" width="5%"> 写真を投稿</p></section></a>
+      <a href=""><section class="menu02"><p>みんなの投稿</p></section></a>
+      <a href=""><section class="menu03"><p>過去のテーマ</p></section></a>
+    </article>
+    <footer>
+      <p>募集期間：2015年8月6日〜8月10日</p>
+    </footer>
 
-<div class="modal-content_camera" id="start" style="display: none; left: 69.5px; top: 0px;">
-<p>写真を投稿</p>
-<div class="modal-start">
-<div class="modal-cube"><a><img src="img/002_post-photo/post_btn_icon_01.png"><br>写真をとる</a></div></div>
-<div class="modal-start">
-<div class="modal-cube"><a><img src="img/002_post-photo/post_btn_icon_02.png"><br>アルバムから</a></div></div>
-<div class="modal-close"></div>
-</div>
+    <div class="modal-content_camera" id="start" style="display: none; left: 69.5px; top: 0px;">
+      <p>写真を投稿</p>
+      <div class="modal-start">
+      <div class="modal-cube"><a id="camera"><img src="img/002_post-photo/post_btn_icon_01.png"><br>写真をとる</a></div></div>
+      <div class="modal-start">
+      <div class="modal-cube"><a id="album"><img src="img/002_post-photo/post_btn_icon_02.png"><br>アルバムから</a></div></div>
+      <div class="modal-close"></div>
+    </div>
 
-</body>
+  </body>
 </html>
