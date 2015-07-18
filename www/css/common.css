@@ -21,13 +21,10 @@ h1{
 }
 /*ランチ画面*/
 #launch {
-	background-image: url(../img/lunch/logo.png);
-	background-attachment: fixed;
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
 	color: #FFF;
+	text-align: center;
 }
+
 
 /*ホーム画面*/
 #home {
