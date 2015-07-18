@@ -25,6 +25,9 @@ h1{
 	text-align: center;
 }
 
+#launch img{
+padding-top:50px; 
+}
 
 /*ホーム画面*/
 #home {
