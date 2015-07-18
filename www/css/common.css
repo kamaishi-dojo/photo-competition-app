@@ -16,8 +16,17 @@ a {
 }
 
 h1{
-	font-size: 1.5em;
+	font-size: 1.2em;
 	margin: 0;
+}
+/*ランチ画面*/
+#launch {
+	background-image: url(../img/lunch/logo.png);
+	background-attachment: fixed;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: #FFF;
 }
 
 /*ホーム画面*/
@@ -174,6 +183,7 @@ input.form_area{
 	margin: 10px 0 20px 0;
 	border: 0;
 	background: #FFF;
+	color: #666;
 }
 
 #login label{
@@ -181,7 +191,7 @@ input.form_area{
 	padding:0 15px;
 }
 
-input.submit{
+button.submit{
 	background: #0f9;
 	border: 1px solid #DDD;
 	border-radius: 20px;
@@ -191,6 +201,8 @@ input.submit{
 	padding: 10px 0;
 	margin: 20px 50px;
 	text-align: center;
+	font-size: 1.0rem;
+	padding:10px;
 }
 
 /*プレビュー画面*/
@@ -211,6 +223,122 @@ padding: 25px 0;
 
 #preview figure{
 	width: 50%;
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+
+/*投稿画面*/
+#post {
+	background: #DDD;
+}
+#post header{
+	vertical-align: middle;
+	text-align: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	background: url(../img/common-icon/hdr_icon_prev_b.png) no-repeat #FFF;
+	background-position: left center;
+	background-size: 10%;
+}
+#post article{
+	padding-top: 58px;
+}
+
+#post textarea{
+	border: none;
+	font-size: 1.0rem;
+	margin: 0;
+	width: 100%;
+}
+
+label.pin{
+	padding-left: 20px;
+}
+
+img.thumb{
+	width: 60px;
+	height:60px;
+	vertical-align:middle;
+}
+
+input.title_area{
+	border: none;
+	font-size: 1rem;
+}
+
+div.post_area{
+	border: none;
+	font-size: 1.0rem;
+	background: #FFF;
+	padding:10px 10px;
+	margin: 15px 0;
+}
+
+div.sns{
+	background: url(../img/common-icon/icon_list_arrow.png) no-repeat #FFF;
+	background-position: right center;
+	background-size: 10%;
+}
+
+#post footer.off{
+	vertical-align: middle;
+	background-color: #999;
+	color:#FFF;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	font-size: 1.2em;
+}
+
+#post footer.on{
+	vertical-align: middle;
+	background-color: #f60;
+	color:#FFF;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	font-size: 1.2em;
+}
+
+#post button{
+	color: #FFF;
+	font-size: 1.2rem;
+	padding:15px;
+	border: none;
+	width: 100%:
+	}
+
+.on{
+	background-color: #f60;
+}
+
+/*みんなの投稿画面*/
+#allpost footer{
+vertical-align: middle;
+background-color: #FFF;
+color:#FFF;
+text-align: center;
+position: fixed;
+bottom: 0;
+left: 0;
+z-index: 99999999999;
+opacity: 0.9;
+width: 100%;
+padding: 15px 0;
+}
+
+#allpost figure{
+	width: 33%;
 	float: left;
 	padding: 0;
 	margin: 0;
