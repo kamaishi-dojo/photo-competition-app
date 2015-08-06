@@ -16,7 +16,7 @@ a {
 }
 
 h1{
-	font-size: 1.2em;
+	font-size: 1.0em;
 	margin: 0;
 }
 /*ランチ画面*/
@@ -26,7 +26,7 @@ h1{
 }
 
 #launch img{
-padding-top:50px; 
+padding-top:100px;
 }
 
 /*ホーム画面*/
@@ -133,22 +133,49 @@ div.tut_button{
 }
 
 /*ログイン画面*/
-#login{
+#login,#mypage_edit,#mypage{
 	background: #DDD;
 }
 
 #login header{
  text-align: center;
  background-image: url(../img/005_mypage/gr_top.png);
+ padding-top: 10px;
 }
 
-#login h1{
+#mypage_edit header:before,
+#mypage header:before {
+ content: "";
+/* background-image: url(../img/005_mypage/profile_sample.jpg);
+ z-index: 0;
+ -webkit-filter: blur(5px);
+ -moz-filter: blur(5px);
+ -o-filter: blur(5px);
+ -ms-filter: blur(5px);
+ filter: blur(5px);
+ background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+	position: absolute;*/
+}
+
+#mypage_edit header, #mypage header{
+	text-align: center;
+	z-index: 0;
+	margin-top: 10px;
+}
+
+#login h1, #mypage_edit h1{
 	color: #FFF;
-	padding-top: 10px;
 }
 
-#login article{
-	padding-top: 20px
+#mypage h2,h3{
+	font-size: 1.0em;
+	color: #FFF;
+}
+
+#mypage h3{
+	padding-bottom: 15px;
 }
 
 img.prof_default {
@@ -160,15 +187,35 @@ img.prof_default {
 	display:inline-block!important;
 }
 
+img.prof_mypage {
+  width: 100px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+	margin: 20px 0 0px 0;
+	display:inline-block!important;
+}
+
+img.prof_icon_like{
+	vertical-align: middle;
+}
+
 p.caution{
 	padding:0 15px;
 	margin: 0;
 	font-size: 0.8em;
 }
 
+#login, #mypage,#mypage_edit article{
+	background: #DDD;
+	text-align: left;
+	color: #000;
+}
+
 div.profile_change{
 	text-align: center;
 	margin-top: 50px;
+	padding-bottom: 10px;
 }
 
 div.submit_area{
@@ -186,12 +233,51 @@ input.form_area{
 	color: #666;
 }
 
-#login label{
+#login,#mypage_edit label{
 	text-align: left;
-	padding:0 15px;
+/*	padding:0 15px;*/
 }
 
-button.submit{
+footer.gbnav{
+vertical-align: middle;
+background-color: #FFF;
+color:#FFF;
+text-align: center;
+position: fixed;
+bottom: 0;
+left: 0;
+z-index: 99999999999;
+-moz-opacity:0.9;
+opacity: 0.9;
+width: 100%;
+padding: 25px 0;
+}
+
+figure.home_btn{
+	width: 33%;
+	float: left;
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+}
+
+figure.post_btn{
+	width: 33%;
+	float: left;
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+}
+
+figure.menu_btn{
+	width: 33%;
+	float: left;
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+}
+
+input.submit{
 	background: #0f9;
 	border: 1px solid #DDD;
 	border-radius: 20px;
@@ -320,26 +406,4 @@ div.sns{
 
 .on{
 	background-color: #f60;
-}
-
-/*みんなの投稿画面*/
-#allpost footer{
-vertical-align: middle;
-background-color: #FFF;
-color:#FFF;
-text-align: center;
-position: fixed;
-bottom: 0;
-left: 0;
-z-index: 99999999999;
-opacity: 0.9;
-width: 100%;
-padding: 15px 0;
-}
-
-#allpost figure{
-	width: 33%;
-	float: left;
-	padding: 0;
-	margin: 0;
 }
