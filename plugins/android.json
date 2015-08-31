@@ -13,11 +13,11 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
+                            "xml": "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -39,10 +39,10 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "org.tohokutechdojo.kamaishi.photocompetitionapp"
         },
-        "org.apache.cordova.camera": {
+        "org.apache.cordova.file": {
             "PACKAGE_NAME": "org.tohokutechdojo.kamaishi.photocompetitionapp"
         },
-        "org.apache.cordova.file": {
+        "cordova-plugin-camera": {
             "PACKAGE_NAME": "org.tohokutechdojo.kamaishi.photocompetitionapp"
         }
     },

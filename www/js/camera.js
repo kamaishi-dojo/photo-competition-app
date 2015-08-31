@@ -23,8 +23,8 @@ $(function() {
             allowEdit: false,
             destinationType: Camera.DestinationType.FILE_URI,
             sourceType: Camera.PictureSourceType.CAMERA,
-            encodingType: Camera.EncodingType.JPEG
-            // saveToPhotoAlbum: true // アルバムに保存するとトップに戻ってしまう
+            encodingType: Camera.EncodingType.JPEG,
+            saveToPhotoAlbum: true
         };
 
         // カメラを起動
