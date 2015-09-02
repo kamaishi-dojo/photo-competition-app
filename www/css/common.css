@@ -407,3 +407,9 @@ div.sns{
 .on{
 	background-color: #f60;
 }
+
+.button_back{
+    width: 10%;
+    float: right;
+    padding: 10px;
+}

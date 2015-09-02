@@ -10,7 +10,7 @@ $(function () {
                 location.replace("tutorial001.html");
             }
         }, 2000);
-    };
+    }
 
     if ($('#tutorial').length > 0) {
         $('a[href="home.html"]').on('click', function () {
@@ -38,6 +38,11 @@ $(function () {
         });
     }
 
+    if($('#home_theme_detail').length > 0){
+        $('#page_back').on('click', function() {
+            history.back();
+        });
+    }
 
     // $('home').ready(function () {
     //     $('#take_picture').click(function () {
