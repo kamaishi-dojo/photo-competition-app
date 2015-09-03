@@ -413,3 +413,61 @@ div.sns{
     float: right;
     padding: 10px;
 }
+
+#about article{
+    background-color: #FFF;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#about header{
+    padding-top: 25px;
+    padding-bottom: 5px;
+    text-align: center;
+    background-image: url("../img/006_explanation/about_bg.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: 120%;
+    width: 100%;
+    color: #FFF;
+}
+
+#about section{
+    background-color: #EDEDED;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+#about article.button_onry{
+    padding: 15px;
+}
+
+#about .top_icon{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#about .about_text{
+    margin-bottom: 15px;
+}
+
+#about .button_divider{
+    height: 15px;
+}
+
+#about .about_common_button{
+    background-color: #2980B9;
+    color: #FFF;
+    border-radius: 1px;
+    -moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
