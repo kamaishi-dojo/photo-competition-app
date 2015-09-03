@@ -471,3 +471,52 @@ div.sns{
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
+/*#credit body{
+    width: 100vw;
+    height: 100vh;
+}*/
+
+#credit .body{
+    background-color: #EDEDED;
+    background-image: url("../img/007_credit/credit_bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:top center;
+    background-size: 100%;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#credit section {
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    background-attachment: fixed;
+    margin-left: 6%;
+    width:  88%;
+    height: 90%;
+    color: #FFF;
+}
+#credit p {
+    line-height: 9px;
+}
+
+#credit article{
+    margin-bottom: 25px;
+}
+
+#credit .logo_img{
+    width: 70%;
+}
+
+#credit ::-webkit-scrollbar {
+    width: 6px;
+}
+
+#credit ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.3);
+}
