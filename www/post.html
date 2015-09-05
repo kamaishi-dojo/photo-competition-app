@@ -1,54 +1,77 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes">
-<title>投稿作品制作画面</title>
-<meta name="description" content="">
-<meta name="keywords" content="">
-<link rel="stylesheet" media="(min-height: 480px)" href="css/common.css">
-<link rel="stylesheet" media="(max-height: 480px)" href="css/common_320.css">
-<link rel="stylesheet" href="css/modal.css">
-<script src="js/jquery-2.1.4.min.js"></script>
-<script src="js/modal_windows.js"></script>
-<!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-<![endif]-->
-</head>
-<body id="post">
-<header>
-<p>写真情報の入力</p>
-</header>
-<form action="xxx" method="post">
-<article>
-<div class="post_area">
-<img src="img/003_post-all/post_sample_h.jpg" class="thumb">
-<input class="title_area" name="title" maxlength="15" size="25" placeholder="タイトル（15文字以内）" required></input>
-</div>
-<div class="post_area">
-<textarea name="comments" maxlength="40" rows="5" placeholder="コメント（40文字以内）" required>
-</textarea></div>
-<div class="post_area">
-<img src="img/002_post-photo/icon_pin.png" width="5%"> 写真の位置情報
-<label class="pin"><input type="radio" name="repeat" value="OFF" checked>OFF</label>
-<label><input type="radio" name="repeat" value="ON">ON</label>
-</div>
-<div class="post_area sns">
-<img src="img/002_post-photo/icon_pin.png" width="5%"> SNSに共有
-</div>
-</article>
-<footer class="on">
-<button value="submit" class="on modal-open" data-target="success" >投稿する</button>
-</footer>
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes">
+            <title>投稿作品制作画面</title>
+            <meta name="description" content="">
+            <meta name="keywords" content="">
+            <link rel="stylesheet" href="css/common.css">
+            <link rel="stylesheet" href="css/modal.css">
+            <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+            <script src="js/jquery-2.1.4.min.js"></script>
+            <script src="js/jquery.mobile-1.4.5.min.js"></script>
+            <script src="js/modal_windows.js"></script>
+            <!-- <script src="js/page.js"></script> -->
+    </head>
+    <body id="post">
+            <header>
+                <span>
+                    <img id="page_back" class="header_back_arrow" src="img/common-icon/hdr_icon_prev_b.png">
+                    <p>写真情報の入力</p>
+                </span>
+            </header>
+            <form action="xxx" method="post">
+                <article>
+                    <div class="post_text_area">
+                        <img id="post_thumbnail" class="thumb modal-open" data-target="post_picture_detail_modal" src="img/003_post-all/post_sample_h.jpg">
+                        <input class="title_area" name="title" maxlength="15" size="25" placeholder="タイトルを入力（15文字以内）" required></input>
+                    </div>
+                    <div class="post_text_area">
+                        <textarea name="comments" maxlength="40" rows="5" placeholder="写真に対するコメントを入力してください（40文字以内）" required></textarea>
+                    </div>
+                    <div class="post_area arrow_right">
+                        <img src="img/002_post-photo/icon_heart.png" width="5%" class="post_area_center">
+                        <div class="post_area_text">スタンプ編集</div>
+                    </div>
+                    <div class="post_area">
+                        <img src="img/002_post-photo/icon_pin.png" width="5%" class="post_area_center">
+                        <div class="post_area_text">写真の位置情報</div>
+                        <div class="location_toggle">
+                            <input type="checkbox" id="location_toggle" data-role="flipswitch"
+                                data-off-text="No" data-on-text="Yes"/>
+                        </div>
+                    </div>
+                    <p class="sns_title">SNSに共有</p>
+                    <div class="post_area_sns">
+                        <div id="sns_facebook">
+                            <img class="sns" src="img/002_post-photo/btn_fb.png">
+                        </div>
+                        <div id="sns_twiter">
+                            <img class="sns" src="img/002_post-photo/btn_tw.png">
+                        </div>
+                    </div>
+                </article>
+                <footer value="submit" class="on modal-open" data-target="success">
+                    <p>投稿する</p>
+                </footer>
 
-</form>
-<div class="modal-content" id="success" style="display: none; left: 69.5px; top: 0px;">
-<img src="img/common-icon/prof_entrance.png">
-<p>投稿が完了しました！</p><br>
-<p>投稿ありがとうございました！<br>運営のチェック後にアップいたします！</p>
-<a class="modal-close">閉じる</a>
-</div>
-
-</body>
+            </form>
+            <div class="modal-content" id="success" style="display: none; left: 69.5px; top: 0px;">
+                <img src="img/002_post-photo/img.png">
+                <p>投稿が完了しました！</p><br>
+                <p>投稿ありがとうございました！<br>運営のチェック後にアップいたします！</p>
+            </div>
+            <div class="modal-content_full" id="post_picture_detail_modal">
+                <img id="post_detail_img" src="img/003_post-all/post_sample_h.jpg">
+                <img class="modal-close modal-close_button_back" src="img/common-icon/btn_close_w.png">
+                <div class="post_picture_detail_modal_text">
+                    <h1 id="post_detail_title">ダミータイトル</h1>
+                    <p id="post_detail_text">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+                        ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+                    <HR color="#AAA" noshade size="2">
+                    <p id="post_detail_date">2015年08月25日</p>
+                </div>
+            </div>
+        </body>
 </html>
