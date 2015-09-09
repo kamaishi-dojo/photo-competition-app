@@ -138,3 +138,95 @@
     bottom: 0;
     margin: auto;
 }
+
+.modal_agreement_modal{
+    position: absolute;
+    width: 86%;
+    height: 75%;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    color: #000;
+    background-color: #FFF;
+}
+
+.modal_agreement_header{
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    left: 0px;
+    height: 40px;
+    width: 100%;
+    color: #000;
+}
+
+.modal_agreement_text{
+    position: absolute;
+    text-align: left;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 60%;
+    width: 88%;
+    top: 50px;
+    left: 0px;
+    margin-left: 6%;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modal_agreement_text_block{
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.modal_agreement_check{
+    position: absolute;
+    bottom: 65px;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-bottom: 15px;
+}
+
+#agreement_button{
+    position: absolute;
+    height: 34px;
+    width: 88%;
+    margin-left: 6%;
+    margin-bottom: 15px;
+    padding-top: 17px;
+    background-color: #F60;
+    bottom: 0px;
+    left: 0px;
+}
+
+#agreement_modal h1.text {
+    line-height: 16px;
+}
+
+#agreement_modal p.text{
+    color: #8D8D8D;
+    line-height: 18px;
+    font-size: 12pt;
+}
+
+#agreement_modal p.button_text_w{
+    vertical-align: middle;
+    color: #FFF;
+    margin: auto;
+}
+
+#agreement_modal ::-webkit-scrollbar {
+    width: 6px;
+}
+
+#agreement_modal ::-webkit-scrollbar-track{
+    background-color: #E3E3E3;
+}
+
+#agreement_modal ::-webkit-scrollbar-thumb {
+    background-color: #929292;
+}

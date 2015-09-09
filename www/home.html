@@ -12,23 +12,25 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/modal_windows.js"></script>
+    <script src="js/utilities.js"></script>
     <script src="js/page.js"></script>
     <script src="js/camera.js"></script>
+    <script src="js/home.js"></script>
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body id="home">
+  <body id="home" class="home">
     <header>
-      <a><img src="img/001_top/icon_mypage_w.png" width="20px"><span class="mypage">マイページ</span><img src="img/001_top/icon_mypage_arrow.png" width="8px"></a>
+      <a href="post.html"><img src="img/001_top/icon_mypage_w.png" width="20px"><span class="mypage">マイページ</span><img src="img/001_top/icon_mypage_arrow.png" width="8px"></a>
     </header>
 
     <article>
-      <a href="home_theme_detail.html"><img src="img/001_top/top_title.png" class="home_title"></a>
-      <a data-target="start" class="modal-open"><section class="menu01"><p><img src="img/001_top/icon_photo.png" width="5%"> 写真を投稿</p></section></a>
+      <a href="home_theme_detail.html"><img id="img_logo" src="img/001_top/top_title.png" class="home_title"></a>
+      <a id="post_photo"><section class="menu01"><p><img src="img/001_top/icon_photo.png" width="5%"> 写真を投稿</p></section></a>
       <a href=""><section class="menu02"><p>みんなの投稿</p></section></a>
-      <a href=""><section class="menu03"><p>過去のテーマ</p></section></a>
+      <section class="menu03"><p>過去のテーマ</p></section>
     </article>
     <footer>
       <p>募集期間：2015年8月6日〜8月10日</p>
@@ -41,6 +43,47 @@
       <div class="modal-start">
       <div class="modal-cube"><a id="album"><img src="img/002_post-photo/post_btn_icon_02.png"><br>アルバムから</a></div></div>
       <div class="modal-close"></div>
+    </div>
+
+    <div class="modal-content_full" id="agreement_modal">
+        <img class="modal-close modal-close_button_back" src="img/common-icon/btn_close_w.png">
+        <div class ="modal_agreement_modal">
+            <div class = "modal_agreement_header">
+                <p>投稿規約</p>
+            </div>
+            <div class = "modal_agreement_text">
+                <div class ="modal_agreement_text_block">
+                    <h1 class="text">投稿規約</h1>
+                    <p class="text">投稿規約投稿規約投稿規約投稿規約投稿規約
+                    投稿規約投稿規約投稿規約投稿規約投稿規約
+                    投稿規約投稿規約投稿規約投稿規約投稿規約
+                    投稿規約投稿規約投稿規約投稿規約投稿規約</p>
+                </div>
+                <div class ="modal_agreement_text_block">
+                    <h1 class="text">投稿規約</h1>
+                    <p class="text">投稿規約投稿規約投稿規約投稿規約投稿規約
+                    投稿規約投稿規約投稿規約投稿規約投稿規約
+                    投稿規約投稿規約投稿規約投稿規約投稿規約
+                    投稿規約投稿規約投稿規約投稿規約投稿規約</p>
+                </div>
+                <div class ="modal_agreement_text_block">
+                    <h1 class="text">投稿規約</h1>
+                    <p class="text">投稿規約投稿規約投稿規約投稿規約投稿規約
+                    投稿規約投稿規約投稿規約投稿規約投稿規約
+                    投稿規約投稿規約投稿規約投稿規約投稿規約
+                    投稿規約投稿規約投稿規約投稿規約投稿規約</p>
+                </div>
+            </div>
+            <div class = "modal_agreement_check">
+                <span>
+                    <img id="modal_agreement_check_img" src="img/001_top/check_box_off.png" width="15px">
+                    規約に同意する
+                </span>
+            </div>
+            <div id="agreement_button">
+                <p class = "button_text_w">投稿へ進む</p>
+            </div>
+        </div>
     </div>
 
   </body>
