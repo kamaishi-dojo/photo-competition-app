@@ -38,8 +38,8 @@ $(function () {
         });
     }
 
-    if($('#home_theme_detail').length > 0){
-        $('#page_back').on('click', function() {
+    if($('.page_back').length > 0){
+        $('.page_back').on('click', function() {
             history.back();
         });
     }
