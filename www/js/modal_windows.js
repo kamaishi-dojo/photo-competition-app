@@ -12,7 +12,12 @@ kamachare.modal = {
         $('.modal-overlay').fadeIn('slow');
 
         // モーダルコンテンツのIDを取得
-        var modal = modalId ||'#' + $(this).attr('data-target');
+        var modal;
+        if (jQuery.type(modalId) === "string"){
+            modal= modalId;
+        } else {
+            modal= '#' + $(this).attr('data-target');
+        }
 
         // モーダルコンテンツを囲む要素を追加
         $(modal).wrap("<div class='modal-wrap'></div>");
@@ -33,7 +38,6 @@ kamachare.modal = {
 
         // 「.modal-overlay」あるいは「.modal-close」をクリック
         $('.modal-wrap, .modal-close').off().click(function(){
-            var modal = modalId;
             // モーダルコンテンツとオーバーレイをフェードアウト
             $(modal).fadeOut('slow');
             $('.modal-overlay').fadeOut('slow',function(){
