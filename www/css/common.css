@@ -654,3 +654,170 @@ div.arrow_right{
     margin: auto;
     width: 15px;
 }
+/*post_all_detail*/
+#post_all_detail {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#post_all_detail>header{
+    position: relative;
+    width: 100%;
+    height: 75%;
+}
+
+#post_all_detail>header>.modal-open{
+    position: relative;
+    height: 62%;
+    text-align: center;
+}
+
+#post_all_detail>header #header_user_photo{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    z-index: -2;
+}
+
+#post_all_detail>header #header_photo_shadow{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+}
+
+#post_all_detail>header #header_photo_backGround{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: -3;
+}
+
+#post_all_detail>header #header_user_icon{
+    position: absolute;
+    top: 56%;
+    right: 20px;
+    width: 75px;
+    height: 75px;
+    border-radius: 75px;
+}
+
+#post_all_detail>header #header_back_arrow_top_left{
+    position: absolute;
+    width: 10%;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+}
+
+#post_all_detail>header #header_photo_detail{
+    position: absolute;
+    top: 67%;
+    left: 10px;
+    right: 10px;
+}
+
+#post_all_detail>header #header_photo_detail h1{
+    font-size: 15pt;
+}
+
+#post_all_detail>header #header_end{
+    position: absolute;
+    height: 25px;
+    left: 10px;
+    right: 10px;
+    bottom: 3px;
+}
+
+#post_all_detail>header #header_user_info{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    color: #999;
+    font-size: 11pt;
+}
+
+#post_all_detail>header #header_yoisa_count{
+    position: absolute;
+    height: 25px;
+    right: 117px;
+    color: #DC83AD;
+}
+
+#post_all_detail>header #header_yoisa_count img{
+    position: absolute;
+    height: 25px;
+}
+
+#post_all_detail>header #header_yoisa_count p{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: -30px;
+    margin: 0px;
+    line-height: 25px;
+}
+
+#post_all_detail>header #header_yoisa_button{
+    position: absolute;
+    height: 25px;
+    width: 75px;
+    right: 0px;
+}
+
+#post_all_detail>header #header_yoisa_button img{
+    position: absolute;
+    height: 25px;
+    top: 0px;
+    right: 0px;
+}
+
+#post_all_detail>header #header_yoisa_button p{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 48px;
+    margin: 0px;
+    color: #DC83AD;
+    font-size: 10pt;
+    line-height: 25px;
+    z-index: 1;
+}
+
+#map_section{
+    position: absolute;
+    top: 75%;
+    left: 0px;
+    right: 0px;
+    height: 400px;
+    margin-top: 2px;
+    padding: 10px;
+    background-color: #EDEDED;
+}
+
+#map_field {
+    overflow: visible;
+    position: absolute;
+    top: 12px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.divide{
+    width: 100%;
+    height: 2px;
+    background-color: #CCC;
+}
