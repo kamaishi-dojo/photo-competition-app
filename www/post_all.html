@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes">
-<title>みんなの投稿画面</title>
-<meta name="description" content="">
-<meta name="keywords" content="">
-<link rel="stylesheet" href="css/common.css">
-<link rel="stylesheet" href="css/modal.css">
-<script src="js/jquery-2.1.4.min.js"></script>
-<script src="js/modal_windows.js"></script>
-<!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-<![endif]-->
-</head>
-<body id="allpost">
-<header>
-
-</header>
-
-<article>
-
-</article>
-<footer class="gbnav">
-  <figure class="home_btn"><img src="img/navi/nav_btn_home.png" width="35%"></figure>
-  <figure class="post_btn"><img src="img/navi/nav_btn_post.png" width="50%" class="post_img"></figure>
-  <figure class="menu_btn"><img src="img/navi/nav_btn_menu.png" width="35%"></figure>
-</footer>
-</div>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes">
+        <title>みんなの投稿画面</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/modal.css">
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/modal_windows.js"></script>
+        <script src="js/utilities.js"></script>
+        <script src="js/post_all.js"></script>
+    </head>
+    <body id="post_all" class="post_all">
+        <header>
+            <div class="header_sort">
+                <span>
+                    <p id="header_text">新着順</p>
+                    <img class="header_sort_arrow" src="img/003_post-all/icon_sort_arrow.png">
+                </span>
+            </div>
+            <div><a href="home_theme_detail.html">
+                <img id="post_all_top_logo" src="img/001_top/top_title.png" width="25%">
+            </a></div>
+        </header>
+        <article>
+            <div><img></div>
+        </article>
+        <footer class="gbnav">
+            <figure class="home_btn"><img src="img/navi/nav_btn_home.png" width="35%"></figure>
+            <figure class="post_btn"><img src="img/navi/nav_btn_post.png" width="50%" class="post_img"></figure>
+            <figure class="menu_btn"><img src="img/navi/nav_btn_menu.png" width="35%"></figure>
+        </footer>
+    </body>
 </html>
