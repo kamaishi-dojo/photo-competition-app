@@ -255,41 +255,100 @@ input.form_area{
 
 footer.gbnav{
 vertical-align: middle;
-background-color: #FFF;
+background-size: cover;
 color:#FFF;
 text-align: center;
 position: fixed;
 bottom: 0;
 left: 0;
-z-index: 99999999999;
--moz-opacity:0.9;
-opacity: 0.9;
+z-index: 99999998;
 width: 100%;
-padding: 25px 0;
+padding: 0;
+}
+
+@media (min-width:768px) {
+    /*　画面サイズが992pxからはここを読み込む　*/
+footer.gbnav{ background-size: contain;}
 }
 
 figure.home_btn{
-	width: 33%;
+	width: 33.3333%;
 	float: left;
 	padding: 0;
 	margin: 0;
 	vertical-align: middle;
+	padding-top: 30px;
 }
 
 figure.post_btn{
-	width: 33%;
+	width: 33.3333%;
 	float: left;
 	padding: 0;
 	margin: 0;
 	vertical-align: middle;
+	padding-top: 10px;
 }
 
 figure.menu_btn{
-	width: 33%;
+	width: 33.3333%;
 	float: left;
 	padding: 0;
 	margin: 0;
 	vertical-align: middle;
+	padding-top: 30px;
+
+}
+
+.hide-submenu{
+	width:100%;
+	position: fixed;
+	display: none;
+	background-color: #FFF;
+	z-index: 99999999;
+	bottom: 0;
+}
+
+.show{
+	width:100%;
+	position: fixed;
+	left: 0;
+	bottom: 10;
+	display: block;
+	z-index: 99999999;
+	background-color: #FFF;
+}
+
+.submenu{
+	width: 70%;
+	float: left;
+	padding-left: 10px;
+	padding-top: 15px;
+}
+
+figure.close_submenu_btn{
+	float: right;
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+	text-align: right;
+	padding-top: 10px;
+}
+
+figure.submenu_btn{
+	width: 100%;
+	float: left;
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+	padding-top: 10px;
+	text-align: center;
+	border-top: 1px solid #999;
+}
+
+.submenu_btn img{
+	width: 20%;
+	height: auto;
+	padding: 5px;
 }
 
 input.submit{
