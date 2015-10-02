@@ -1,12 +1,16 @@
 $(function(){
     var userPhotoRes = "img/003_post-all/post_sample_h.jpg";
     var yoisa_count = 0;
+    var isYoisaClick = false;
 
     $('#header_yoisa_button').click(function (){
-        yoisa_count += 1;
-        $(this).children('img').attr('src', 'img/003_post-all/btn_like_on.png');
-        $(this).children('p').css('color', '#FFF');
-        $('#header_yoisa_count').children('p').html(yoisa_count.toString());
+        if(!isYoisaClick) {
+            isYoisaClick = true;
+            yoisa_count += 1;
+            $(this).children('img').attr('src', 'img/003_post-all/btn_like_on.png');
+            $(this).children('p').css('color', '#FFF');
+            $('#header_yoisa_count').children('p').html(yoisa_count.toString());
+        }
     });
 
     (function setPostPhoto(){
