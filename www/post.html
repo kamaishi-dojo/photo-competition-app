@@ -12,7 +12,9 @@
             <script src="js/jquery-2.1.4.min.js"></script>
             <script src="js/jquery.mobile-1.4.5.min.js"></script>
             <script src="js/modal_windows.js"></script>
+            <script src="js/key.js"></script>
             <script src="js/page.js"></script>
+            <script src="js/post.js"></script>
     </head>
     <body id="post">
             <header>
@@ -24,16 +26,18 @@
             <form action="xxx" method="post">
                 <article>
                     <div class="post_text_area">
-                        <img id="post_thumbnail" class="thumb modal-open" data-target="post_picture_detail_modal" src="img/003_post-all/post_sample_h.jpg">
-                        <input class="title_area" name="title" maxlength="15" size="25" placeholder="タイトルを入力（15文字以内）" required></input>
+                        <div id="post_thumbnail_div">
+                            <img id="post_thumbnail" class="thumb" data-target="post_picture_detail_modal" src="img/003_post-all/post_sample_h.jpg">
+                        </div>
+                        <input id="title" class="title_area" name="title" maxlength="15" size="25" placeholder="タイトルを入力（15文字以内）" required></input>
                     </div>
                     <div class="post_text_area">
-                        <textarea name="comments" maxlength="40" rows="5" placeholder="写真に対するコメントを入力してください（40文字以内）" required></textarea>
+                        <textarea id="comments" name="comments" maxlength="40" rows="5" placeholder="写真に対するコメントを入力してください（40文字以内）" required></textarea>
                     </div>
-                    <div class="post_area arrow_right">
+                    <!-- <div class="post_area arrow_right">
                         <img src="img/002_post-photo/icon_heart.png" width="5%" class="post_area_center">
                         <div class="post_area_text">スタンプ編集</div>
-                    </div>
+                    </div> -->
                     <div class="post_area">
                         <img src="img/002_post-photo/icon_pin.png" width="5%" class="post_area_center">
                         <div class="post_area_text">写真の位置情報</div>
@@ -52,7 +56,7 @@
                         </div>
                     </div>
                 </article>
-                <footer value="submit" class="on modal-open" data-target="success">
+                <footer value="submit" class="on modal-open shadow_off" data-target="success">
                     <p>投稿する</p>
                 </footer>
 
@@ -66,11 +70,11 @@
                 <img id="post_detail_img" src="img/003_post-all/post_sample_h.jpg">
                 <img class="modal-close modal-close_button_back" src="img/common-icon/btn_close_w.png">
                 <div class="post_picture_detail_modal_text">
-                    <h1 id="post_detail_title">ダミータイトル</h1>
-                    <p id="post_detail_text">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+                    <h1 id="post_detail_title" class="stroke shadow_off">ダミータイトル</h1>
+                    <p id="post_detail_text" class="stroke shadow_off">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
                         ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
                     <HR color="#AAA" noshade size="2">
-                    <p id="post_detail_date">2015年08月25日</p>
+                    <p id="post_detail_date" class="stroke shadow_off">2015年08月25日</p>
                 </div>
             </div>
         </body>

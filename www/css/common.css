@@ -506,6 +506,24 @@ img.thumb{
 	width: 60px;
 	height:60px;
 	vertical-align:middle;
+    overflow: hidden;
+}
+
+#post_thumbnail_div{
+    position: relative;
+    width: 60px;
+	height:60px;
+	vertical-align:middle;
+    overflow: hidden;
+}
+
+.stroke{
+    font-size: 1.3rem;
+    -webkit-text-stroke: 0.4px #000;
+}
+
+.shadow_off{
+    text-shadow: 0 0px 0 #FFF;
 }
 
 input.title_area{
