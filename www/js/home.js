@@ -1,9 +1,10 @@
 $(function(){
     var _this = $('.home');
+    var permanentStorage = window.localStorage;
     var isOldThemeEnable = false;
-    var agreed = false;
+    var agreed = true;
     var agree = false;
-    var logedin = false;
+    var logedin = permanentStorage.getItem(kamachare.localStoreKey.loggedIn);
     var bgImgRes = 'img/001_top/bgi_sample.jpg';
     var logoImg = 'img/001_top/top_title.png';
 
@@ -56,7 +57,11 @@ $(function(){
                          kamachare.modal.open('#start');
                      }
                  }else{
-                     window.location.href = 'login.html';
+                     if(logedin){
+                         window.location.href = 'post.html';
+                     }else{
+                         window.location.href = 'login.html';
+                     }
                  }
              });
          }

@@ -1,9 +1,14 @@
-$(function () {
 
+$(function () {
+    // $.getScript('js/key.js');
     if ($('#launch').length > 0) {
         setTimeout(function () {
             var permanentStorage = window.localStorage;
-            if (permanentStorage.getItem('shown_tutorial')) {
+
+            //init
+            permanentStorage.setItem(kamachare.localStoreKey.loggedIn, true);
+
+            if (permanentStorage.getItem(kamachare.localStoreKey.shownTutorial)) {
                 location.replace("home.html");
             }
             else {
@@ -15,13 +20,13 @@ $(function () {
     if ($('#tutorial').length > 0) {
         $('a[href="home.html"]').on('click', function () {
             var permanentStorage = window.localStorage;
-            permanentStorage.setItem('shown_tutorial', true);
+            permanentStorage.setItem(kamachare.localStoreKey.shownTutorial, true);
         });
     }
 
     if ($('#preview').length > 0) {
         var permanentStorage = window.localStorage;
-        var fileURL = permanentStorage.getItem('last_taken_file_url');
+        var fileURL = permanentStorage.getItem(kamachare.localStoreKey.lastTakenFileUrl);
         $('#preview_image').attr('src', fileURL);
 
         $('#cancel').on('click', function() {
@@ -29,8 +34,8 @@ $(function () {
         });
         $('#submit').on('click', function() {
             var permanentStorage = window.localStorage;
-            if (permanentStorage.getItem('user')) {
-                // TODO 投稿画面へ
+            if (permanentStorage.getItem(kamachare.localStoreKey.loggedIn)) {
+                location.href = "post.html";
             }
             else {
                 location.href = "login.html";
