@@ -1,4 +1,5 @@
-var pictureSrc = "img/003_post-all/post_sample_h.jpg";
+var dateFormat = 'YYYY年MM月DD日';
+var pictureSrc = 'img/003_post-all/post_sample_h.jpg';
 
 function onThumbnailLoad(){
     var top, left, imgWidth, imgHeight;
@@ -47,6 +48,15 @@ $(function(){
         var comments = $("#comments").val();
         $('#post_detail_title').html(title);
         $('#post_detail_text').html(comments);
+
+        var date = new Date();
+        var dateString = dateFormat;
+        dateString = dateString.replace(/YYYY/g, date.getFullYear());
+        dateString = dateString.replace(/MM/g, ('0' + (date.getMonth() + 1)).slice(-2));
+        dateString = dateString.replace(/DD/g, ('0' + date.getDate()).slice(-2));
+
+        $('#post_detail_date').html(dateString);
+
         kamachare.modal.open('#post_picture_detail_modal');
     });
 
