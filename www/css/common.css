@@ -260,7 +260,6 @@ div.tut_button{
 #mypage article>div{
     padding-top: 2px;
     padding-right: 2px;
-    z-index: 11;
     margin: 0px;
     border: 2px #000 solid;
     overflow: hidden;
@@ -269,7 +268,6 @@ div.tut_button{
 #mypage article>div>img{
     height: 100%;
     width: 100%;
-    z-index: 10;
 }
 
 img.prof_default {
@@ -852,7 +850,6 @@ div.arrow_right{
 #post_all article>div{
     padding-top: 2px;
     padding-right: 2px;
-    z-index: 11;
     margin: 0px;
     border: 2px #000 solid;
     overflow: hidden;
@@ -861,7 +858,6 @@ div.arrow_right{
 #post_all article>div>img{
     height: 100%;
     width: 100%;
-    z-index: 10;
 }
 
 #post_all footer{

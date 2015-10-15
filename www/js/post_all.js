@@ -68,20 +68,30 @@ $(function(){
                 imgWidth = this.width * (divHeight / this.height);
                 left = -((imgWidth/2) - (divWidth/2));
                 top = 0;
+                this.img.css({
+                    'position' : 'absolute',
+                    'width' : imgWidth.toString() + 'px',
+                    'height' : '100%',
+                    'top' : top.toString() + 'px',
+                    'left' : left.toString() + 'px'
+                });
             } else {
                 imgWidth = divWidth;
                 imgHeight = this.height * (divWidth / this.width);
                 top = -((imgHeight/2) - (divHeight/2));
                 left = 0;
+                this.img.css({
+                    'position' : 'absolute',
+                    'width' : '100%',
+                    'height' : imgHeight.toString() + 'px',
+                    'top' : top.toString() + 'px',
+                    'left' : left.toString() + 'px'
+                });
             }
-            this.img.css({
-                'position' : 'absolute',
-                'width' : imgWidth.toString() + 'px',
-                'height' : imgHeight.toString() + 'px',
-                'top' : top.toString() + 'px',
-                'left' : left.toString() + 'px'
-            });
+
         }
+
+        article.empty();
         for (i = 0; i < srcs.length; i += 1) {
             var divId = 'post_div_' + i.toString();
             var imgId = 'post_photo_' + i.toString();
@@ -95,7 +105,8 @@ $(function(){
                 'width' : iWidth.toString() + 'px',
                 'height' : iHeight.toString() + 'px',
                 'top' : top.toString() + 'px',
-                'left' : left.toString() + 'px'
+                'left' : left.toString() + 'px',
+                'z-index' : '-' + i.toString()
             });
 
             var img = $('#' + imgId);
