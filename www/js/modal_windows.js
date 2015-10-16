@@ -2,6 +2,11 @@ var kamachare = kamachare || {};
 
 kamachare.modal = {
     open : function(modalId){
+        // スクロールバーの横幅を取得
+        $('html').append('<div class="scrollbar" style="overflow:scroll;"></div>');
+        var scrollsize = window.innerWidth - $('.scrollbar').prop('clientWidth');
+        $('.scrollbar').hide();
+
         // html、bodyを固定（overflow:hiddenにする）
         $('html, body').addClass('lock');
 
@@ -104,11 +109,6 @@ kamachare.modal = {
 };
 
 $(function(){
-    // スクロールバーの横幅を取得
-    $('html').append('<div class="scrollbar" style="overflow:scroll;"></div>');
-    var scrollsize = window.innerWidth - $('.scrollbar').prop('clientWidth');
-    $('.scrollbar').hide();
-
     // 「.modal-open」をクリック
     $('.modal-open').click(kamachare.modal.open);
 });
