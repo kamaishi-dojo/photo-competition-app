@@ -2,6 +2,12 @@ $(function(){
     var permanentStorage = window.localStorage;
     var userName = permanentStorage.getItem(kamachare.localStoreKey.userName);
     var email = permanentStorage.getItem(kamachare.localStoreKey.userEmail);
+    var iconRes = permanentStorage.getItem(kamachare.localStoreKey.userIconSrc);
+
+    if(iconRes){
+        $('.prof_mypage_bg').attr('src', iconRes);
+        $('.prof_default').attr('src', iconRes);
+    }
 
     if(userName){
         $('#user_name').val(userName);

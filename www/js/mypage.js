@@ -22,9 +22,7 @@ $(function(){
         var iconRes = window.localStorage.getItem(kamachare.localStoreKey.userIconSrc);
         $('#user_name').html(username);
         if(iconRes){
-            $('.prof_mypage_bg').css({
-                'background-image' : 'url(' + iconRes + ')'
-            });
+            $('.prof_mypage_bg').attr('src', iconRes);
             $('.prof_mypage').attr('src', iconRes);
         }
     })();
