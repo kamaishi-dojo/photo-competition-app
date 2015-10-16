@@ -181,6 +181,22 @@ div.tut_button{
     width: 100%;
 }
 
+#mypage_edit_header_back_arrow{
+    position: absolute;
+    width: 10%;
+    top: 10px;
+    left: 10px;
+}
+
+#mypage_edit .prof_mypage_bg_div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -2;
+    overflow: hidden;
+}
+
 #login h1, #mypage_edit h1{
 	color: #FFF;
 }
