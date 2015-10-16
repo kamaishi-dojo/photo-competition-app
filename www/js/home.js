@@ -1,12 +1,22 @@
 $(function(){
-    var _this = $('.home');
     var permanentStorage = window.localStorage;
     var isOldThemeEnable = false;
-    var agreed = true;
-    var agree = false;
-    var logedin = permanentStorage.getItem(kamachare.localStoreKey.loggedIn);
+    var checkAgree = false;
     var bgImgRes = 'img/001_top/bgi_sample.jpg';
     var logoImg = 'img/001_top/top_title.png';
+
+    function toBool (string){
+        if(!string){
+            return;
+        }
+        if(string === 'true'){
+            return true;
+        }
+        return false;
+    }
+
+    var agreed = toBool(permanentStorage.getItem(kamachare.localStoreKey.agreed));
+    var logedin = toBool(permanentStorage.getItem(kamachare.localStoreKey.loggedIn));
 
     $('.home').css('background-image', 'url(\"' + bgImgRes + '\")');
 
@@ -34,12 +44,20 @@ $(function(){
         });
     }
 
+    $('#mypage_button').click(function(){
+        if(agreed){
+            window.location.href = 'mypage.html';
+        }else{
+            kamachare.modal.open('#agreement_modal');
+        }
+    });
+
     //agreement modal
     $('.modal_agreement_check').click(function(){
         var agreeImg = $(this).children('span').children('img');
-        agree = !agree;
+        checkAgree = !checkAgree;
 
-        if(agree){
+        if(checkAgree){
             agreeImg.attr('src', 'img/001_top/check_box_on.png');
         }else{
             agreeImg.attr('src', 'img/001_top/check_box_off.png');
@@ -49,30 +67,27 @@ $(function(){
      var agreementButton = $('#agreement_button');
 
      agreementButton.click(function(){
-         if(agree){
+         if(checkAgree){
              agreed = true;
+             permanentStorage.setItem(kamachare.localStoreKey.agreed, agreed);
              kamachare.modal.close('#agreement_modal', function(){
                  if(logedin){
                      if('#home'){
                          kamachare.modal.open('#start');
                      }
                  }else{
-                     if(logedin){
-                         window.location.href = 'post.html';
-                     }else{
-                         window.location.href = 'login.html';
-                     }
+                     window.location.href = 'login.html';
                  }
              });
          }
      });
 
      if(logedin){
-         if('#home'){
-             agreementButton.css('background-color','#F60');
+        if($('#home')){
+            agreementButton.css('background-color','#F60');
             agreementButton.children('p').html('投稿へ進む');
         } else{
-            agreementButton.css('background-color','#F60');
+            camera.jsagreementButton.css('background-color','#F60');
             agreementButton.children('p').html('進む');
         }
 

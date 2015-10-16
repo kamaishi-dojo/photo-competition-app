@@ -6,9 +6,10 @@ $(function () {
             var permanentStorage = window.localStorage;
 
             //init
-            permanentStorage.setItem(kamachare.localStoreKey.loggedIn, true);
+            permanentStorage.setItem(kamachare.localStoreKey.loggedIn, false);
+            permanentStorage.setItem(kamachare.localStoreKey.agreed, false);
 
-            if (permanentStorage.getItem(kamachare.localStoreKey.shownTutorial)) {
+            if (toBool(permanentStorage.getItem(kamachare.localStoreKey.shownTutorial))) {
                 location.replace("home.html");
             }
             else {
@@ -34,12 +35,12 @@ $(function () {
         });
         $('#submit').on('click', function() {
             var permanentStorage = window.localStorage;
-            if (permanentStorage.getItem(kamachare.localStoreKey.loggedIn)) {
+            // if (permanentStorage.getItem(kamachare.localStoreKey.loggedIn)) {
                 location.href = "post.html";
-            }
-            else {
-                location.href = "login.html";
-            }
+            // }
+            // else {
+            //     location.href = "login.html";
+            // }
         });
     }
 
@@ -56,3 +57,13 @@ $(function () {
     // });
 
 });
+
+function toBool (string){
+    if(!string){
+        return;
+    }
+    if(string === 'true'){
+        return true;
+    }
+    return false;
+}

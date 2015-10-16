@@ -7,4 +7,6 @@ kamachare.localStoreKey = {
     shownTutorial : 'shown_tutorial',
     userName : 'user_name',
     userEmail : 'user_email',
+
+    agreed : 'agreed',
 };
