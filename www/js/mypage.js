@@ -146,7 +146,7 @@ $(function(){
         var srcs = [];
         if($(this).hasClass('tab_left')){
             if(tab !== TAB.MYPHOTO){
-                srcs = setDummy(20);
+                srcs = getDummy(20);
                 setPicture(srcs);
                 $(this).css('border-bottom','2px #FD9327 solid');
                 $(this).children('.tab_text').css('color','#FD9327');
@@ -156,7 +156,7 @@ $(function(){
             }
         }else if($(this).hasClass('tab_right')){
             if(tab !== TAB.FAVORITE){
-                srcs = setDummy(31);
+                srcs = getDummy(31);
                 setPicture(srcs);
                 $(this).css('border-bottom','2px #FD9327 solid');
                 $(this).children('.tab_text').css('color','#FD9327');
