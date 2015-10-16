@@ -11,7 +11,8 @@
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/modal_windows.js"></script>
 <script src="js/page.js"></script>
-<!-- <script src="js/mypage_edit.js"></script> -->
+<script src="js/key.js"></script>
+<script src="js/mypage_edit.js"></script>
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -19,7 +20,10 @@
 </head>
 <body id="mypage_edit">
 <header>
+<img id="mypage_edit_header_back_arrow" class="page_back" src="img/common-icon/hdr_icon_prev_w.png">
+<div class="prof_mypage_bg_div">
 <img src="img/005_mypage/profile_sample.jpg" class="prof_mypage_bg"><br>
+</div>
 <h1>登録情報の編集</h1>
 <img src="img/005_mypage/profile_sample.jpg" class="prof_default"><br>
 </header>
@@ -27,21 +31,25 @@
 <article>
 <form action="xxx" method="post">
 <label>表示名</label>
-<input type="text" placeholder="入力してください" required class="form_area">
+<input id="user_name" type="text" placeholder="入力してください" required class="form_area">
 <label>登録メールアドレス</label>
-<input type="email" placeholder="未登録" required class="form_area">
+<input id="email" type="email" placeholder="未登録" required class="form_area">
 <p class="caution">
-※登録いただいたメールアドレスはアプリ内で表示されることはありません。コンテスト入賞時などにご連絡のため必要な情報となります。<br>
-※上記項目はご連絡後、アプリのトップページにある「マイページ」からいつでも変更が可能です。</p>
+※登録いただいたメールアドレスはアプリ内で表示されることはありません。
+コンテスト入賞時などにご連絡のため必要な情報となります。
+</p>
 <div class="submit_area">
-<a data-target="success" class="modal-open"><input class="submit" disabled value="内容を送信する"></a></div>
+<input id="send_button" type="button" class="submit" value="内容を送信する">
+</div>
 </form>
 </article>
+<div class="modal-content" id="loading" style="display: none; left: 69.5px; top: 0px;">
+<img src="img/common-icon/loading.svg">
+</div>
 <div class="modal-content" id="success" style="display: none; left: 69.5px; top: 0px;">
 <img src="img/common-icon/prof_entrance.png">
 <p>送信完了！</p>
 <p>入力いただいたメールアドレスに登録完了メールをお送りしました！</p>
-<a class="modal-close">閉じる</a>
 </div>
 </body>
 </html>
