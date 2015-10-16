@@ -17,16 +17,16 @@ $(function(){
         wHeight = $(window).height();
     })();
 
-    (function setHeaderBg() {
-        var bgImgRes = 'img/005_mypage/profile_sample.jpg';
-        var bgImg = new Image();
-        bgImg.onload = function() {
-            var wWidth = $(window).width();
+    (function setUserData() {
+        var username = window.localStorage.getItem(kamachare.localStoreKey.userName);
+        var iconRes = window.localStorage.getItem(kamachare.localStoreKey.userIconSrc);
+        $('#user_name').html(username);
+        if(iconRes){
             $('.prof_mypage_bg').css({
-                'background-image' : 'url(' + this.src + ')'
+                'background-image' : 'url(' + iconRes + ')'
             });
-        };
-        bgImg.src = bgImgRes;
+            $('.prof_mypage').attr('src', iconRes);
+        }
     })();
 
     var iWidth, iHeight;
