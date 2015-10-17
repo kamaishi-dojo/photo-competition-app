@@ -12,6 +12,19 @@
 <script src="js/modal_windows.js"></script>
 <script src="js/key.js"></script>
 <script src="js/mypage.js"></script>
+<script type="text/javascript">
+
+$(function() {
+	$("#open-submenu").on("click",function(){
+		$(".hide-submenu").slideDown("show");
+		});
+	$(".close_submenu_btn").on("click",function(){
+		$(".hide-submenu").slideUp("show");
+		});
+  });
+
+</script>
+
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -37,11 +50,16 @@
 <article>
     <div><img></div>
 </article>
-
+<div class="hide-submenu">
+  <div class="submenu">メニュー</div>
+  <figure class="close_submenu_btn"><img src="img/common-icon/btn_close_b.png" width="35%"></figure>
+  <figure class="submenu_btn">
+    <img src="img/navi/after/menu01.png"><img src="img/navi/after/menu02.png"><img src="img/navi/after/menu03.png"><img src="img/navi/after/menu04.png"</figure>
+</div>
 <footer class="gbnav">
   <figure class="home_btn"><img src="img/navi/nav_btn_home.png" width="35%"></figure>
   <figure class="post_btn"><img src="img/navi/nav_btn_post.png" width="50%" class="post_img"></figure>
-  <figure class="menu_btn"><img src="img/navi/nav_btn_menu.png" width="35%"></figure>
+  <a id="open-submenu"><figure class="menu_btn"><img src="img/navi/nav_btn_menu.png" width="35%"></figure></a>
 </footer>
 </body>
 </html>

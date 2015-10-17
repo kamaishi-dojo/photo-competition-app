@@ -349,7 +349,7 @@ input.form_area{
 footer.gbnav{
 vertical-align: middle;
 background-size: cover;
-color:#FFF;
+background-color:#FFF;
 text-align: center;
 position: fixed;
 bottom: 0;
@@ -365,31 +365,24 @@ footer.gbnav{ background-size: contain;}
 }
 
 figure.home_btn{
-	width: 33.3333%;
-	float: left;
-	padding: 0;
+	width: 32%;
+float:left;
 	margin: 0;
-	vertical-align: middle;
-	padding-top: 30px;
+			margin-top: 10px;
 }
 
 figure.post_btn{
-	width: 33.3333%;
-	float: left;
-	padding: 0;
-	margin: 0;
-	vertical-align: middle;
-	padding-top: 10px;
+	width: 36%;
+float:left;
+		margin: 0;
+		margin-top: -10px;
 }
 
 figure.menu_btn{
-	width: 33.3333%;
-	float: left;
-	padding: 0;
-	margin: 0;
-	vertical-align: middle;
-	padding-top: 30px;
-
+	width: 32%;
+float:left;
+		margin: 0;
+		margin-top: 10px;
 }
 
 .hide-submenu{
