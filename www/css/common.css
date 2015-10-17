@@ -432,11 +432,13 @@ figure.submenu_btn{
 	border-top: 1px solid #999;
 }
 
-.submenu_btn img{
-	width: 20%;
-	height: auto;
-	padding: 5px;
+figure.submenu_btn div{
+	width: 25%;
+	float: left;
+	margin-bottom: 10px;
+	font-size: 0.8rem;
 }
+
 
 input.submit{
 	background: #0f9;
