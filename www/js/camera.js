@@ -9,7 +9,7 @@ $(function() {
     };
 
 
-    $('#camera').on('click', function() {
+    $('#camera').click(function() {
 
         // カメラのチェク
         if (!navigator.camera) {
@@ -23,24 +23,56 @@ $(function() {
             allowEdit: false,
             destinationType: Camera.DestinationType.FILE_URI,
             sourceType: Camera.PictureSourceType.CAMERA,
-            encodingType: Camera.EncodingType.JPEG
-            // saveToPhotoAlbum: true // アルバムに保存するとトップに戻ってしまう
+            encodingType: Camera.EncodingType.JPEG,
+            saveToPhotoAlbum: true
         };
 
         // カメラを起動
         navigator.camera.getPicture(
             function(fileURL) {
                 var permanentStorage = window.localStorage;
-                permanentStorage.setItem('last_taken_file_url', fileURL);
+                permanentStorage.setItem(kamachare.localStoreKey.lastTakenFileUrl, fileURL);
                 location.href = "preview.html";
-                // var ft = new FileTransfer();
-                // ft.upload(fileURL, encodeURI("http://192.168.1.101/upload.php"), win, fail);
             },
-            function() {
-                alert('Error taking picture', 'Error');
+            function(message) {
+                if(message !== 'Camera cancelled.'){
+                    alert('Error : ' + message);
+                }
             },
             options
         );
 
+    });
+
+    $('#album').click(function() {
+
+        // カメラのチェク
+        if (!navigator.camera) {
+            alert("Camera API not supported", "Error");
+            return;
+        }
+
+        var options = {
+            quality: 80,
+            allowEdit: false,
+            destinationType: Camera.DestinationType.FILE_URI,
+            sourceType: Camera.PictureSourceType.PHOTOLIBRARY ,
+            encodingType: Camera.EncodingType.JPEG
+        };
+
+        // カメラを起動
+        navigator.camera.getPicture(
+            function(fileURL) {
+                var permanentStorage = window.localStorage;
+                permanentStorage.setItem(kamachare.localStoreKey.lastTakenFileUrl, fileURL);
+                location.href = "preview.html";
+            },
+            function(message) {
+                if(message !== 'Camera cancelled.'){
+                    alert('Error : ' + message);
+                }
+            },
+            options
+        );
     });
 });

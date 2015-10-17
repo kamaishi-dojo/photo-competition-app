@@ -16,7 +16,7 @@ a {
 }
 
 h1{
-	font-size: 1.2em;
+	font-size: 1.0em;
 	margin: 0;
 }
 /*ランチ画面*/
@@ -26,13 +26,12 @@ h1{
 }
 
 #launch img{
-padding-top:50px; 
+padding-top:100px;
 }
 
 /*ホーム画面*/
-#home {
-	background-image: url(../img/001_top/bgi_sample.jpg);
-	background-position: center top;
+.home {
+    background-position: top center;
 	color: #FFF;
 }
 
@@ -41,28 +40,28 @@ padding-top:50px;
 	padding: 5px;
 }
 
-#home header{
+.home header{
 	vertical-align: bottom;
 	padding-left: 10px;
 	padding-top: 10px;
 }
 
-#home article{
+.home article{
 	text-align: center;
 	padding-top: 20px;
 	margin:25px;
 }
 
-#home img.home_title{
+.home img.home_title{
 	width:80%;
 }
 
-#home a{
+.home a{
 	color: #FFF;
 	text-decoration: none;
 }
 
-#home footer{
+.home footer{
 	vertical-align: middle;
 	background-color: #333;
 	color:#FFF;
@@ -80,6 +79,22 @@ section.menu01{
 	text-align: center;
 	border: 1px solid #FFF;
 	margin-top: 40px;
+}
+
+section.menu01_border_off{
+	text-align: center;
+	margin-top: 50px;
+}
+
+section.menu01_old_theme{
+	text-align: center;
+	border: 1px solid #FFF;
+	margin-top: 40px;
+    width: 45%;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    margin-top: 25px;
 }
 
 section.menu02{
@@ -133,22 +148,142 @@ div.tut_button{
 }
 
 /*ログイン画面*/
-#login{
+#login,#mypage_edit,#mypage{
 	background: #DDD;
 }
 
 #login header{
  text-align: center;
  background-image: url(../img/005_mypage/gr_top.png);
+ padding-top: 10px;
 }
 
-#login h1{
+#mypage_edit header:before,
+#mypage header:before {
+ content: "";
+/* background-image: url(../img/005_mypage/profile_sample.jpg);
+ z-index: 0;
+ -webkit-filter: blur(5px);
+ -moz-filter: blur(5px);
+ -o-filter: blur(5px);
+ -ms-filter: blur(5px);
+ filter: blur(5px);
+ background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+	position: absolute;*/
+}
+
+#mypage_edit header, #mypage header{
+	text-align: center;
+	z-index: 0;
+	margin-top: 10px;
+    width: 100%;
+}
+
+#mypage_edit_header_back_arrow{
+    position: absolute;
+    width: 10%;
+    top: 10px;
+    left: 10px;
+}
+
+#mypage_edit .prof_mypage_bg_div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -2;
+    overflow: hidden;
+}
+
+#login h1, #mypage_edit h1{
 	color: #FFF;
-	padding-top: 10px;
 }
 
-#login article{
-	padding-top: 20px
+#mypage h2,h3{
+	font-size: 1.0em;
+	color: #FFF;
+}
+
+#mypage h3{
+	padding-bottom: 15px;
+}
+
+#mypage .prof_mypage_bg, #mypage_edit .prof_mypage_bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -2;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -ms-filter: blur(5px);
+    -o-filter: blur(5px);
+    filter: blur(5px);
+}
+
+#mypage .mypage_edit_button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 23%;
+}
+
+#mypage .tab {
+    position: relative;
+    background-color: #FFF;
+    width: 100%;
+    height: 50px;
+    z-index: 5;
+}
+
+#mypage .tab_left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 48px;
+    border-bottom : 2px #FFF solid;
+    text-align: center;
+}
+
+#mypage .tab_right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 50%;
+    height: 48px;
+    border-bottom : 2px #FFF solid;
+    text-align: center;
+}
+
+#mypage .tab_text {
+    color: #000;
+    line-height: 25px;
+
+}
+
+#mypage article{
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    z-index: 5;
+    background-color: #000;
+}
+
+#mypage article>div{
+    padding-top: 2px;
+    padding-right: 2px;
+    margin: 0px;
+    border: 2px #000 solid;
+    overflow: hidden;
+}
+
+#mypage article>div>img{
+    height: 100%;
+    width: 100%;
 }
 
 img.prof_default {
@@ -160,15 +295,35 @@ img.prof_default {
 	display:inline-block!important;
 }
 
+img.prof_mypage {
+  width: 100px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+	margin: 20px 0 0px 0;
+	display:inline-block!important;
+}
+
+img.prof_icon_like{
+	vertical-align: middle;
+}
+
 p.caution{
 	padding:0 15px;
 	margin: 0;
 	font-size: 0.8em;
 }
 
+#login, #mypage,#mypage_edit article{
+	background: #DDD;
+	text-align: left;
+	color: #000;
+}
+
 div.profile_change{
 	text-align: center;
 	margin-top: 50px;
+	padding-bottom: 10px;
 }
 
 div.submit_area{
@@ -186,12 +341,110 @@ input.form_area{
 	color: #666;
 }
 
-#login label{
+#login,#mypage_edit label{
 	text-align: left;
-	padding:0 15px;
+/*	padding:0 15px;*/
 }
 
-button.submit{
+footer.gbnav{
+vertical-align: middle;
+background-size: cover;
+color:#FFF;
+text-align: center;
+position: fixed;
+bottom: 0;
+left: 0;
+z-index: 99999998;
+width: 100%;
+padding: 0;
+}
+
+@media (min-width:768px) {
+    /*　画面サイズが992pxからはここを読み込む　*/
+footer.gbnav{ background-size: contain;}
+}
+
+figure.home_btn{
+	width: 33.3333%;
+	float: left;
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+	padding-top: 30px;
+}
+
+figure.post_btn{
+	width: 33.3333%;
+	float: left;
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+	padding-top: 10px;
+}
+
+figure.menu_btn{
+	width: 33.3333%;
+	float: left;
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+	padding-top: 30px;
+
+}
+
+.hide-submenu{
+	width:100%;
+	position: fixed;
+	display: none;
+	background-color: #FFF;
+	z-index: 99999999;
+	bottom: 0;
+}
+
+.show{
+	width:100%;
+	position: fixed;
+	left: 0;
+	bottom: 10;
+	display: block;
+	z-index: 99999999;
+	background-color: #FFF;
+}
+
+.submenu{
+	width: 70%;
+	float: left;
+	padding-left: 10px;
+	padding-top: 15px;
+}
+
+figure.close_submenu_btn{
+	float: right;
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+	text-align: right;
+	padding-top: 10px;
+}
+
+figure.submenu_btn{
+	width: 100%;
+	float: left;
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+	padding-top: 10px;
+	text-align: center;
+	border-top: 1px solid #999;
+}
+
+.submenu_btn img{
+	width: 20%;
+	height: auto;
+	padding: 5px;
+}
+
+input.submit{
 	background: #0f9;
 	border: 1px solid #DDD;
 	border-radius: 20px;
@@ -230,7 +483,8 @@ padding: 25px 0;
 
 /*投稿画面*/
 #post {
-	background: #DDD;
+	background: #EDEDED;
+    height: 100vh;
 }
 #post header{
 	vertical-align: middle;
@@ -240,12 +494,15 @@ padding: 25px 0;
 	left: 0;
 	z-index: 1;
 	width: 100%;
-	background: url(../img/common-icon/hdr_icon_prev_b.png) no-repeat #FFF;
-	background-position: left center;
-	background-size: 10%;
+    background: #EDEDED;
 }
 #post article{
-	padding-top: 58px;
+    position: relative;
+    width: 100%;
+	top: 58px;
+    padding-bottom: 80px;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 #post textarea{
@@ -263,6 +520,24 @@ img.thumb{
 	width: 60px;
 	height:60px;
 	vertical-align:middle;
+    overflow: hidden;
+}
+
+#post_thumbnail_div{
+    position: relative;
+    width: 60px;
+	height:60px;
+	vertical-align:middle;
+    overflow: hidden;
+}
+
+.stroke{
+    font-size: 1.3rem;
+    -webkit-text-stroke: 0.4px #000;
+}
+
+.shadow_off{
+    text-shadow: 0 0px 0 #FFF;
 }
 
 input.title_area{
@@ -270,18 +545,97 @@ input.title_area{
 	font-size: 1rem;
 }
 
-div.post_area{
-	border: none;
+div.post_text_area{
+    border: none;
 	font-size: 1.0rem;
 	background: #FFF;
 	padding:10px 10px;
 	margin: 15px 0;
 }
 
-div.sns{
+div.post_area{
+	border: none;
+    position: relative;
+    height: 43px;
+	font-size: 1.0rem;
+	background: #FFF;
+	padding:10px 10px;
+	margin: 15px 0;
+    line-height: 43px;
+}
+
+.header_back_arrow{
+    position: absolute;
+    width: 10%;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: auto;
+    padding-left: 10px;
+}
+
+.header_title{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px
+    margin: auto;
+}
+
+.post_area_center{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+}
+
+.post_area_text{
+    position: absolute;
+    left: 5%;
+    padding-left: 20px;
+}
+
+div.post_area_sns{
+    position: relative;
+	width: 100%;
+    height: 53px;
+}
+
+#sns_facebook{
+    position: absolute;
+    width: 50%;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #3B5998;
+}
+
+#sns_twiter{
+    position: absolute;
+    width: 50%;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: #5EA9DD;
+}
+
+img.sns{
+    position: absolute;
+    width: 60%;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    text-align: center;
+    margin: auto;
+    color: #FFF;
+}
+
+div.arrow_right{
 	background: url(../img/common-icon/icon_list_arrow.png) no-repeat #FFF;
 	background-position: right center;
-	background-size: 10%;
+	background-size: 5%;
 }
 
 #post footer.off{
@@ -322,24 +676,374 @@ div.sns{
 	background-color: #f60;
 }
 
-/*みんなの投稿画面*/
-#allpost footer{
-vertical-align: middle;
-background-color: #FFF;
-color:#FFF;
-text-align: center;
-position: fixed;
-bottom: 0;
-left: 0;
-z-index: 99999999999;
-opacity: 0.9;
-width: 100%;
-padding: 15px 0;
+.location_toggle{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin: auto;
+    height: 48px;
+    padding-right: 10px;
 }
 
-#allpost figure{
-	width: 33%;
-	float: left;
-	padding: 0;
-	margin: 0;
+.sns_title{
+    font-size: 9pt;
+    margin-left: 10px
+}
+
+.button_back{
+    width: 10%;
+    float: right;
+    margin: 10px;
+}
+
+#about article{
+    background-color: #FFF;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#about header{
+    padding-top: 25px;
+    padding-bottom: 5px;
+    text-align: center;
+    background-image: url("../img/006_explanation/about_bg.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: 120%;
+    width: 100%;
+    color: #FFF;
+}
+
+#about section{
+    background-color: #EDEDED;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+#about article.button_onry{
+    padding: 15px;
+}
+
+#about .top_icon{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#about .about_text{
+    margin-bottom: 15px;
+}
+
+#about .button_divider{
+    height: 15px;
+}
+
+#about .about_common_button{
+    background-color: #2980B9;
+    color: #FFF;
+    border-radius: 1px;
+    -moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#credit .body{
+    background-color: #EDEDED;
+    background-image: url("../img/007_credit/credit_bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:top center;
+    background-size: 100%;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#credit section {
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    background-attachment: fixed;
+    margin-left: 6%;
+    width:  88%;
+    height: 90%;
+    color: #FFF;
+}
+#credit p {
+    line-height: 9px;
+}
+
+#credit article{
+    margin-bottom: 25px;
+}
+
+#credit .logo_img{
+    width: 70%;
+}
+
+#credit ::-webkit-scrollbar {
+    width: 6px;
+}
+
+#credit ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.3);
+}
+
+.header_sort{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 20px;
+    width: 80px;
+}
+
+#header_text{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    margin: auto;
+    color: #FFF;
+}
+
+.header_sort_arrow{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    width: 15px;
+}
+
+
+#post_all{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+    z-index: -1;
+}
+
+#post_all header {
+    position: fixed;
+    vertical-align: middle;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:top center;
+    background-size: 100%;
+    width: 100%;
+}
+
+#post_all_top_logo{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 30%;
+}
+
+#post_all article{
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    z-index: 5;
+}
+
+#post_all article>div{
+    padding-top: 2px;
+    padding-right: 2px;
+    margin: 0px;
+    border: 2px #000 solid;
+    overflow: hidden;
+}
+
+#post_all article>div>img{
+    height: 100%;
+    width: 100%;
+}
+
+#post_all footer{
+    z-index: 15;
+}
+
+/*post_all_detail*/
+#post_all_detail {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#post_all_detail>header{
+    position: relative;
+    width: 100%;
+    height: 75%;
+}
+
+#post_all_detail>header>.modal-open{
+    position: relative;
+    height: 62%;
+    text-align: center;
+}
+
+#post_all_detail>header #header_user_photo{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    z-index: -2;
+}
+
+#post_all_detail>header #header_photo_shadow{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+}
+
+#post_all_detail>header #header_photo_backGround{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: -3;
+}
+
+#post_all_detail>header #header_user_icon{
+    position: absolute;
+    top: 56%;
+    right: 20px;
+    width: 75px;
+    height: 75px;
+    border-radius: 75px;
+}
+
+#post_all_detail>header #header_back_arrow_top_left{
+    position: absolute;
+    width: 10%;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+}
+
+#post_all_detail>header #header_photo_detail{
+    position: absolute;
+    top: 67%;
+    left: 10px;
+    right: 10px;
+}
+
+#post_all_detail>header #header_photo_detail h1{
+    font-size: 15pt;
+}
+
+#post_all_detail>header #header_end{
+    position: absolute;
+    height: 25px;
+    left: 10px;
+    right: 10px;
+    bottom: 3px;
+}
+
+#post_all_detail>header #header_user_info{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    color: #999;
+    font-size: 11pt;
+}
+
+#post_all_detail>header #header_yoisa_count{
+    position: absolute;
+    height: 25px;
+    right: 117px;
+    color: #DC83AD;
+}
+
+#post_all_detail>header #header_yoisa_count img{
+    position: absolute;
+    height: 25px;
+}
+
+#post_all_detail>header #header_yoisa_count p{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: -30px;
+    margin: 0px;
+    line-height: 25px;
+}
+
+#post_all_detail>header #header_yoisa_button{
+    position: absolute;
+    height: 25px;
+    width: 75px;
+    right: 0px;
+}
+
+#post_all_detail>header #header_yoisa_button img{
+    position: absolute;
+    height: 25px;
+    top: 0px;
+    right: 0px;
+}
+
+#post_all_detail>header #header_yoisa_button p{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 48px;
+    margin: 0px;
+    color: #DC83AD;
+    font-size: 10pt;
+    line-height: 25px;
+    z-index: 1;
+}
+
+#map_section{
+    position: absolute;
+    top: 75%;
+    left: 0px;
+    right: 0px;
+    height: 400px;
+    margin-top: 2px;
+    padding: 10px;
+    background-color: #EDEDED;
+}
+
+#map_field {
+    overflow: visible;
+    position: absolute;
+    top: 12px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.divide{
+    width: 100%;
+    height: 2px;
+    background-color: #CCC;
 }
