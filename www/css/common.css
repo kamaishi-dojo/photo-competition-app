@@ -279,6 +279,7 @@ div.tut_button{
     margin: 0px;
     border: 2px #000 solid;
     overflow: hidden;
+		margin-bottom: 10px;
 }
 
 #mypage article>div>img{
