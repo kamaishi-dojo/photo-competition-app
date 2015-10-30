@@ -8,10 +8,13 @@
         <meta name="keywords" content="">
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/modal.css">
+        <script type="text/javascript" src="cordova.js"></script>
         <script src="js/jquery-2.1.4.min.js"></script>
         <script src="js/modal_windows.js"></script>
+        <script src="js/key.js"></script>
         <script src="js/utilities.js"></script>
         <script src="js/camera.js"></script>
+        <script src="js/page.js"></script>
         <script src="js/gbnav.js"></script>
         <script src="js/post_all.js"></script>
     </head>
@@ -26,6 +29,12 @@
             <div><a href="home_theme_detail.html">
                 <img id="post_all_top_logo" src="img/001_top/top_title.png" width="25%">
             </a></div>
+            <select name="sort_select">
+                <option value="new_asc">新着昇順</option>
+                <option value="new_desc">新着降順</option>
+                <option value="yoisa_asc">よいさ昇順</option>
+                <option value="yoisa_desc">よいさ降順</option>
+            </select>
         </header>
         <article>
             <div class="list_item_base"><img></div>
