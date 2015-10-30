@@ -1,17 +1,8 @@
-$(function() {
+var kamachare = kamachare || {};
 
-    var win = function () {
-        alert('ok');
-    };
-
-    var fail = function (error) {
-        alert('error!' + error.code + '\n' + error.source + '\n' + error.target);
-    };
-
-
-    $('#camera').click(function() {
-
-        // カメラのチェク
+kamachare.camera = {
+    camera : function(){
+        // カメラのチェック
         if (!navigator.camera) {
             alert("Camera API not supported", "Error");
             return;
@@ -41,12 +32,9 @@ $(function() {
             },
             options
         );
-
-    });
-
-    $('#album').click(function() {
-
-        // カメラのチェク
+    },
+    album : function(){
+        // カメラのチェック
         if (!navigator.camera) {
             alert("Camera API not supported", "Error");
             return;
@@ -60,7 +48,7 @@ $(function() {
             encodingType: Camera.EncodingType.JPEG
         };
 
-        // カメラを起動
+        // 画像選択へ
         navigator.camera.getPicture(
             function(fileURL) {
                 var permanentStorage = window.localStorage;
@@ -68,11 +56,31 @@ $(function() {
                 location.href = "preview.html";
             },
             function(message) {
-                if(message !== 'Camera cancelled.'){
+                if(message !== 'Selection cancelled.'){
                     alert('Error : ' + message);
                 }
             },
             options
         );
-    });
+    }
+};
+
+$(function() {
+    if(document.getElementById("camera") !== null){
+        $('#camera').click(function() {
+            kamachare.camera.camera();
+        });
+    }
+
+    if(document.getElementById("album") !== null){
+        $('#album').click(function() {
+            kamachare.camera.album();
+        });
+    }
+
+    if(document.getElementById("selectUserIcon") !== null){
+        $('#selectUserIcon').click(function() {
+            kamachare.camera.album();
+        });
+    }
 });
