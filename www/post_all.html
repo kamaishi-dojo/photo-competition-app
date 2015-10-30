@@ -11,6 +11,8 @@
         <script src="js/jquery-2.1.4.min.js"></script>
         <script src="js/modal_windows.js"></script>
         <script src="js/utilities.js"></script>
+        <script src="js/camera.js"></script>
+        <script src="js/gbnav.js"></script>
         <script src="js/post_all.js"></script>
     </head>
     <body id="post_all" class="post_all">
@@ -26,12 +28,23 @@
             </a></div>
         </header>
         <article>
-            <div><img></div>
+            <div class="list_item_base"><img></div>
         </article>
+        <div class="hide-submenu">
+            <div class="submenu">メニュー</div>
+            <figure class="close_submenu_btn"><img src="img/common-icon/btn_close_b.png" width="35%"></figure>
+            <figure class="submenu_btn">
+                <div id="submenu_post_all"><img src="img/navi/after/menu01.png" style="width:85%;"><br>投稿一覧</div>
+                <div id="submenu_old_theme"><img src="img/navi/after/menu02.png" style="width:85%;"><br>過去のテーマ</div>
+                <div id="submenu_mypage"><img src="img/navi/after/menu03.png" style="width:85%;"><br>マイページ</div>
+                <div id="submenu_about"><img src="img/navi/after/menu04.png" style="width:85%;"><br>アプリ説明</div>
+            </figure>
+        </div>
+
         <footer class="gbnav">
-            <figure class="home_btn"><img src="img/navi/nav_btn_home.png" width="35%"></figure>
-            <figure class="post_btn"><img src="img/navi/nav_btn_post.png" width="50%" class="post_img"></figure>
-            <figure class="menu_btn"><img src="img/navi/nav_btn_menu.png" width="35%"></figure>
+          <figure class="home_btn"><img src="img/navi/nav_btn_home.png" width="35%"></figure>
+          <figure class="post_btn"><img src="img/navi/nav_btn_post.png" width="50%" class="post_img"></figure>
+          <a id="open-submenu"><figure class="menu_btn"><img src="img/navi/nav_btn_menu.png" width="35%"></figure></a>
         </footer>
     </body>
 </html>
