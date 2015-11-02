@@ -20,20 +20,14 @@
     </head>
     <body id="post_all" class="post_all">
         <header>
-            <div class="header_sort">
-                <span>
-                    <p id="header_text">新着順</p>
-                    <img class="header_sort_arrow" src="img/003_post-all/icon_sort_arrow.png">
-                </span>
-            </div>
             <div><a href="home_theme_detail.html">
                 <img id="post_all_top_logo" src="img/001_top/top_title.png" width="25%">
             </a></div>
-            <select name="sort_select">
-                <option value="new_asc">新着昇順</option>
-                <option value="new_desc">新着降順</option>
-                <option value="yoisa_asc">よいさ昇順</option>
-                <option value="yoisa_desc">よいさ降順</option>
+            <select class="sort_select" name="sort_select">
+                <option value="POSTED_AT_ASC">新着昇順</option>
+                <option value="POSTED_AT_DESC">新着降順</option>
+                <option value="LIKE_ASC">よいさ昇順</option>
+                <option value="LIKE_DESC">よいさ降順</option>
             </select>
         </header>
         <article>

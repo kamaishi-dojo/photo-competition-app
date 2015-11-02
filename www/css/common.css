@@ -575,7 +575,7 @@ div.post_area{
     top: 0px;
     bottom: 0px;
     left: 0px;
-    right: 0px
+    right: 0px;
     margin: auto;
 }
 
@@ -872,8 +872,23 @@ div.arrow_right{
     width: 100%;
 }
 
-#post_all footer{
-    z-index: 15;
+#post_all .sort_select{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding-right: 13px;
+    color: #FFF;
+    background-color: rgba(255,255,255,0);
+    background-image: url(../img/003_post-all/icon_sort_arrow.png);
+    background-size: 15%;
+    background-position: right;
+    background-repeat: no-repeat;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 0;
+	appearance: none;
+    -webkit-appearance: none;
+	-moz-appearance: none;
 }
 
 /*post_all_detail*/

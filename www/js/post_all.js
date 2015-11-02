@@ -128,6 +128,11 @@ $(function(){
             }
         }
     })(getDummy(20));
+
+    $('select[name=sort_select]').change(function(){
+        // ソート操作
+    });
+
     $(window).load(function(){
         article.css('bottom', $('footer').outerHeight(true).toString() + 'px');
     });
