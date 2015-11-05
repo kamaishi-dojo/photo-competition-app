@@ -9,4 +9,5 @@ kamachare.localStoreKey = {
     userEmail : 'user_email',
 
     agreed : 'agreed',
+    userIconSrc :'user_icon_src'
 };

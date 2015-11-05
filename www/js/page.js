@@ -8,6 +8,9 @@ $(function () {
             //init
             permanentStorage.setItem(kamachare.localStoreKey.loggedIn, false);
             permanentStorage.setItem(kamachare.localStoreKey.agreed, false);
+            if(!permanentStorage.getItem(kamachare.localStoreKey.userIconSrc)){
+                permanentStorage.setItem(kamachare.localStoreKey.userIconSrc, 'img/005_mypage/prof_img_null.png');
+            }
 
             if (toBool(permanentStorage.getItem(kamachare.localStoreKey.shownTutorial))) {
                 location.replace("home.html");
