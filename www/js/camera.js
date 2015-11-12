@@ -60,11 +60,12 @@ kamachare.cameraOption = {
     },
     album : {
         allowEdit: false,
-        destinationType: 1, //Camera.DestinationType.FILE_URI
-        sourceType: 0, //Camera.PictureSourceType.PHOTOLIBRARY
-        encodingType: 1 //Camera.EncodingType.PNG
+        destinationType: 2, //Camera.DestinationType.FILE_URI
+        sourceType: 0 //Camera.PictureSourceType.PHOTOLIBRARY
     }
 };
+
+var iconDirectoryEntry;
 
 $(function() {
     if(document.getElementById("camera") !== null){
@@ -87,12 +88,29 @@ $(function() {
                 return;
             }
 
+            if(!iconDirectoryEntry){
+                alert('オブジェクトの取得に失敗しました。\n\'DirectoryEntry\'', 'Error');
+                return;
+            }
+
             // 画像選択へ
             navigator.camera.getPicture(
                 function(fileURL) {
-                    var permanentStorage = window.localStorage;
-                    permanentStorage.setItem(kamachare.localStoreKey.userIconSrc, fileURL);
-                    $('.prof_default').attr('src', fileURL);
+                    function fileSystemError(error){
+                        alert('ファイル操作に失敗しました。\nエラーコード: ' + error.code);
+                    }
+                    window.resolveLocalFileSystemURI(fileURL,
+                        function(fileEntry){
+                            fileEntry.copyTo(iconDirectoryEntry, 'prof_icon',
+                               function(fileEntry){
+                                   var permanentStorage = window.localStorage;
+                                   permanentStorage.setItem(kamachare.localStoreKey.userIconSrc,
+                                        fileEntry.nativeURL);
+                                   $('.prof_default').attr('src', fileEntry.nativeURL);
+                               },fileSystemError
+                            );
+                        },fileSystemError
+                    );
                 },
                 function(message) {
                     if(message !== 'Selection cancelled.'){
@@ -104,3 +122,12 @@ $(function() {
         });
     }
 });
+
+document.addEventListener("deviceready", function onDeviceReady() {
+    window.resolveLocalFileSystemURI(cordova.file.dataDirectory,
+    function(directoryEntry){
+        iconDirectoryEntry = directoryEntry;
+    },function (error){
+        alert('ファイル操作に失敗しました。\nエラーコード: ' + error.code);
+    });
+}, false);
