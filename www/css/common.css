@@ -289,6 +289,7 @@ div.tut_button{
 
 img.prof_default {
   width: 100px;
+  height: 100px;
   border-radius: 100px;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
@@ -298,6 +299,7 @@ img.prof_default {
 
 img.prof_mypage {
   width: 100px;
+  height: 100px;
   border-radius: 100px;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
