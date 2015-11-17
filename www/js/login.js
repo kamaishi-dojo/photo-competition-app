@@ -16,12 +16,12 @@ $(function(){
 
         if(errorMessage === ''){
 
-            kamachare.modal.open('#loading');
+            kamachare.modal.open('#loading', false);
 
             fakeUpdate(function(){
                 kamachare.modal.close('#loading',
                 function(){
-                    kamachare.modal.open('#success');
+                    kamachare.modal.open('#success', false);
                     window.localStorage.setItem(kamachare.localStoreKey.loggedIn, true);
                     window.localStorage.setItem(kamachare.localStoreKey.userName, userName);
                     window.localStorage.setItem(kamachare.localStoreKey.userEmail, email);

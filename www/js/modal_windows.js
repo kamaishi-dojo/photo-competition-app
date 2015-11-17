@@ -1,7 +1,7 @@
 var kamachare = kamachare || {};
 
 kamachare.modal = {
-    open : function(modalId){
+    open : function(modalId, isWrapClickClose){
         // スクロールバーの横幅を取得
         $('html').append('<div class="scrollbar" style="overflow:scroll;"></div>');
         var scrollsize = window.innerWidth - $('.scrollbar').prop('clientWidth');
@@ -24,6 +24,10 @@ kamachare.modal = {
             modal= '#' + $(this).attr('data-target');
         }
 
+        if(jQuery.type(isWrapClickClose) !== 'boolean'){
+            isWrapClickClose = true;
+        }
+
         // モーダルコンテンツを囲む要素を追加
         $(modal).wrap("<div class='modal-wrap'></div>");
 
@@ -43,6 +47,10 @@ kamachare.modal = {
 
         // 「.modal-overlay」あるいは「.modal-close」をクリック
         $('.modal-wrap, .modal-close').off().click(function(){
+            if($(this).hasClass('modal-wrap') && !isWrapClickClose){
+                return;
+            }
+
             // モーダルコンテンツとオーバーレイをフェードアウト
             $(modal).fadeOut('slow');
             $('.modal-overlay').fadeOut('slow',function(){
