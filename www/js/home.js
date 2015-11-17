@@ -36,16 +36,20 @@ $(function(){
             $('section.menu03').css('border','1px solid rgba(255,255,255,0.3)');
         }
         $('#post_photo').click(function(){
-            if(agreed){
-                kamachare.modal.open('#start');
-            }else{
+            logedin = toBool(permanentStorage.getItem(kamachare.localStoreKey.loggedIn));
+            if(!agreed){
                 kamachare.modal.open('#agreement_modal');
+            }else if(!logedin){
+                window.location.href = 'login.html';
+            }else{
+                kamachare.modal.open('#start');
             }
         });
     }
 
     $('#mypage_button').click(function(){
-        if(agreed){
+        logedin = toBool(permanentStorage.getItem(kamachare.localStoreKey.loggedIn));
+        if(agreed && logedin){
             window.location.href = 'mypage.html';
         }else{
             kamachare.modal.open('#agreement_modal');
