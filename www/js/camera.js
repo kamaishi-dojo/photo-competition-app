@@ -55,7 +55,7 @@ kamachare.cameraOption = {
         allowEdit: false,
         destinationType: 1, //Camera.DestinationType.FILE_URI
         sourceType: 1, //Camera.PictureSourceType.CAMERA
-        encodingType: 1,//Camera.EncodingType.PNG
+        encodingType: 0,//Camera.EncodingType.JPEG
         saveToPhotoAlbum: true
     },
     album : {
