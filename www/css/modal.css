@@ -213,6 +213,13 @@
     font-size: 12pt;
 }
 
+#agreement_modal ul.text{
+    color: #8D8D8D;
+    line-height: 18px;
+    font-size: 12pt;
+    padding: 20px;
+}
+
 #agreement_modal p.button_text_w{
     vertical-align: middle;
     color: #FFF;
