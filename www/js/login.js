@@ -4,6 +4,7 @@ $(function(){
     Parse.initialize("nSXGhoP36HfTirY21zKhglOB3FXPRjVu04S3alfK", "5aQYFbFo5DYoKsZgDUi9ZoXoOayi6VQuoXMQdWDS");
 
     $('#send_button').click(function(){
+
         var errorMessage = '';
         var angle = 0;
 
@@ -28,17 +29,20 @@ $(function(){
             user.signUp(null, {
               success: function(user) {
 
-                alert("登録ありがとうございました。");
+                alert("登録したメールアドレスに確認メールを送信しました");
 
               },
               error: function(user, error) {
                 // Show the error message somewhere and let the user try again.
+
                 switch (error.code) {
                 case 202 :
-                    alert("入力した表示名は既に使用されています。");
+                    errorMessage += '\n入力した表示名は既に使用されています';
+                    alert(errorMessage);
                     break;
                 case 203 :
-                    alert("入力したメールアドレスは既に使用されています。");
+                    errorMessage += '\n入力したメールアドレスは既に使用されています';
+                    alert(errorMessage);
                     break;
                 default:
                     alert("Error: " + error.code + " " + error.message);
@@ -61,6 +65,7 @@ $(function(){
 //                    },2000);
 //                });
 //            });
+
         }else{
             alert(errorMessage);
         }
