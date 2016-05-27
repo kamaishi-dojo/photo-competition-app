@@ -1,33 +1,36 @@
 # photo-competition-app
 
-ファイルをandroid端末にインストールする手順
+### ファイルをandroid端末にインストールする手順
 
-・atom上でのTypeScriptのビルド方法
- 　atomのプラグイン"atom-typescript"をインストール
+#### atom上でのTypeScriptのビルド
 
-　　atom-typescript
-　　https://github.com/TypeStrong/atom-typescript
+    atomのプラグイン"atom-typescript"をインストール
 
-　　File　-> Settings -> Install でパッケージを探せば出ます。
+    atom-typescript  
+    https://github.com/TypeStrong/atom-typescript
 
- 　tsconfig.jsonで設定しているので基本的にはtsファイル保存時に自動でコンパイルしてくれます。
- 　任意でビルドする場合はPackages -> TypeScript -> Build でいけます。
+    File　＞ Settings ＞ Install でパッケージを探せば出ます。
 
-・cordovaアプリのビルド方法
-　Mac
-　　ターミナルからコマンドをうつ
+    tsconfig.jsonで設定しているので基本的にはtsファイル保存時に自動でコンパイルしてくれます。  
+    任意でビルドする場合はPackages ＞ TypeScript ＞ Build でいけます。
 
- 　photo-competition-appm　のフォルダに移動
+#### cordovaアプリのビルド方法
+Mac
 
- 　cordova run android と入力
+    ターミナルからコマンドをうつ
 
+    photo-competition-app　のフォルダに移動
 
-　Windows
-　　ターミナルからコマンドをうつ
+    cordova run android と入力
 
- 　photo-competition-appm　のフォルダに移動
+Windows
 
- 　cordova run android と入力
+    ターミナルからコマンドをうつ
+
+    photo-competition-app　のフォルダに移動
+
+    cordova run android と入力
+
 
  投稿規約
  https://docs.google.com/document/d/1x4crQhZmSuPvs37coCNjS7CQuN2-ByLhFuBS85s4oXQ/edit?usp=sharing
