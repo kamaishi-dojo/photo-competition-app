@@ -1,3 +1,4 @@
+/// <reference path="./libs.d.ts" />
 var dateFormat: string = 'YYYY年MM月DD日';
 var pictureSrc: string = 'img/003_post-all/post_sample_h.jpg';
 

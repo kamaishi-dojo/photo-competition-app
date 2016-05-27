@@ -1,3 +1,4 @@
+/// <reference path="./libs.d.ts" />
 $(function(): void {
     var userPhotoRes: string = "img/003_post-all/post_sample_h.jpg";
     var yoisa_count: number = 0;

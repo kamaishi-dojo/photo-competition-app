@@ -1,3 +1,4 @@
+/// <reference path="./libs.d.ts" />
 $(function(): void {
     var permanentStorage: Storage = window.localStorage;
     var userName: string = permanentStorage.getItem(kamachare.localStoreKey.userName);

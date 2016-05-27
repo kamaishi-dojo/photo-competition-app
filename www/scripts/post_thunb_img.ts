@@ -1,3 +1,4 @@
+/// <reference path="./libs.d.ts" />
 class PostThunbImg {
     private img: HTMLImageElement;
     private divElement: JQuery;

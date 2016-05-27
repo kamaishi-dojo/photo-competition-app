@@ -1,3 +1,4 @@
+/// <reference path="./libs.d.ts" />
 $(function (): void {
     // $.getScript('js/key.js');
     if ($('#launch').length > 0) {

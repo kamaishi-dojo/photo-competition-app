@@ -1,3 +1,4 @@
+/// <reference path="./libs.d.ts" />
 var kamachare = kamachare || {};
 
 kamachare.camera = {

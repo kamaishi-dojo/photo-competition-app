@@ -1,3 +1,4 @@
+/// <reference path="./libs.d.ts" />
 //本間先生サンプル
 function getInformations(version: number, success, failure): void {
     $.ajax({

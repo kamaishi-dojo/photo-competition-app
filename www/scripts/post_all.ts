@@ -1,3 +1,4 @@
+/// <reference path="./libs.d.ts" />
 $(function(): void {
     var _this: any = this;
     var defaultColumn: number = 3;

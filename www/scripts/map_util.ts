@@ -1,3 +1,4 @@
+/// <reference path="./libs.d.ts" />
 /*
 * with <script src="https://maps.googleapis.com/maps/api/js?key={APIキー}"></script>
 * css上で対象mapIDの高さと幅が決まっていないと動きません

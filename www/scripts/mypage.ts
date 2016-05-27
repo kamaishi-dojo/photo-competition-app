@@ -1,3 +1,4 @@
+/// <reference path="./libs.d.ts" />
 const TAB = {
     MYPHOTO : 0,
     FAVORITE : 1

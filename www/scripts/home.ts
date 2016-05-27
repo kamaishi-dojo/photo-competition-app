@@ -1,3 +1,4 @@
+/// <reference path="./libs.d.ts" />
 $(function(): void {
     var permanentStorage: Storage = window.localStorage;
     var isOldThemeEnable: boolean = false;

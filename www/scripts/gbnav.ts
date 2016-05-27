@@ -1,3 +1,4 @@
+/// <reference path="./libs.d.ts" />
 $(function(): void {
     class CurrentPageCheck {
         private patern: RegExp;
