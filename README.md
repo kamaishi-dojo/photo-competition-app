@@ -6,13 +6,13 @@
 
     atomのプラグイン"atom-typescript"をインストール
 
-    atom-typescript  
-    https://github.com/TypeStrong/atom-typescript
-
     File　＞ Settings ＞ Install でパッケージを探せば出ます。
 
     tsconfig.jsonで設定しているので基本的にはtsファイル保存時に自動でコンパイルしてくれます。  
     任意でビルドする場合はPackages ＞ TypeScript ＞ Build でいけます。
+
+atom-typescript  
+https://github.com/TypeStrong/atom-typescript
 
 #### cordovaアプリのビルド方法
 Mac
