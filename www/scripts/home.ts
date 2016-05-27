@@ -1,21 +1,12 @@
-/// <reference path="./libs.ts" />
-
-$(function(){
-    var permanentStorage = window.localStorage;
+$(function(): void {
+    var permanentStorage: Storage = window.localStorage;
     var isOldThemeEnable: boolean = false;
     var checkAgree: boolean = false;
     var bgImgRes: string = 'img/001_top/bgi_sample.jpg';
     var logoImg: string = 'img/001_top/top_title.png';
 
-    function toBool (string: string): boolean{
-        if(string === 'true'){
-            return true;
-        }
-        return false;
-    }
-
-    var agreed: boolean = toBool(permanentStorage.getItem(kamachare.localStoreKey.agreed));
-    var logedin: boolean = toBool(permanentStorage.getItem(kamachare.localStoreKey.loggedIn));
+    var agreed: boolean = kamachare.util.toBool(permanentStorage.getItem(kamachare.localStoreKey.agreed));
+    var logedin: boolean = kamachare.util.toBool(permanentStorage.getItem(kamachare.localStoreKey.loggedIn));
 
     $('.home').css('background-image', 'url(\"' + bgImgRes + '\")');
 
@@ -34,8 +25,8 @@ $(function(){
             $('section.menu03').css('color','rgba(255,255,255,0.3)');
             $('section.menu03').css('border','1px solid rgba(255,255,255,0.3)');
         }
-        $('#post_photo').click(function(){
-            logedin = toBool(permanentStorage.getItem(kamachare.localStoreKey.loggedIn));
+        $('#post_photo').click(function(): void {
+            logedin = kamachare.util.toBool(permanentStorage.getItem(kamachare.localStoreKey.loggedIn));
             if(!agreed){
                 kamachare.modal.open('#agreement_modal');
             }else if(!logedin){
@@ -46,8 +37,8 @@ $(function(){
         });
     }
 
-    $('#mypage_button').click(function(){
-        logedin = toBool(permanentStorage.getItem(kamachare.localStoreKey.loggedIn));
+    $('#mypage_button').click(function(): void {
+        logedin = kamachare.util.toBool(permanentStorage.getItem(kamachare.localStoreKey.loggedIn));
         if(agreed && logedin){
             window.location.href = 'mypage.html';
         }else{
@@ -56,8 +47,8 @@ $(function(){
     });
 
     //agreement modal
-    $('.modal_agreement_check').click(function(){
-        var agreeImg = $(this).children('span').children('img');
+    $('.modal_agreement_check').click(function(): void {
+        var agreeImg: JQuery = $(this).children('span').children('img');
         checkAgree = !checkAgree;
 
         if(checkAgree){
@@ -67,14 +58,14 @@ $(function(){
         }
      });
 
-     var agreementButton = $('#agreement_button');
+     var agreementButton: JQuery = $('#agreement_button');
 
-     agreementButton.click(function(){
+     agreementButton.click(function(): void {
          if(checkAgree){
              agreed = true;
              var itemAgreed: string = agreed.toString();
              permanentStorage.setItem(kamachare.localStoreKey.agreed, itemAgreed);
-             kamachare.modal.close('#agreement_modal', function(){
+             kamachare.modal.close('#agreement_modal', function(): void {
                  if(logedin){
                      if('#home'){
                          kamachare.modal.open('#start');
@@ -91,7 +82,7 @@ $(function(){
             agreementButton.css('background-color','#F60');
             agreementButton.children('p').html('投稿へ進む');
         } else{
-            camera.jsagreementButton.css('background-color','#F60');
+            agreementButton.css('background-color','#F60');
             agreementButton.children('p').html('進む');
         }
 

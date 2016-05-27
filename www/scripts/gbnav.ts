@@ -1,11 +1,8 @@
-/// <reference path="./libs.ts" />
-
-$(function(){
-    class CheckMove {
-        private patern: any;
-        // private currentPathName: string;
+$(function(): void {
+    class CurrentPageCheck {
+        private patern: RegExp;
         private nextPathName: string;
-        constructor(patern: any, nextPathName: string) {
+        constructor(patern: RegExp, nextPathName: string) {
             this.patern = patern;
             this.nextPathName = nextPathName;
         }
@@ -19,72 +16,48 @@ $(function(){
                 location.href = this.nextPathName;
             }
         }
-        public setPatern(patern: string): void{
+        public setPatern(patern: RegExp): void{
             this.patern = patern;
         }
         public setNextPathName(nextPathName: string): void{
             this.nextPathName = nextPathName;
         }
     }
-	$("#open-submenu").click(function(){
+	$("#open-submenu").click(function(): void {
 		$(".hide-submenu").slideDown("show");
 	});
-	$(".close_submenu_btn").click(function(){
+	$(".close_submenu_btn").click(function(): void {
 		$(".hide-submenu").slideUp("show");
 	});
 
-    $('.home_btn').click(function(){
+    $('.home_btn').click(function(): void {
         location.replace('home.html');
     });
 
-    $('.post_btn').click(function(){
+    $('.post_btn').click(function(): void {
         kamachare.camera.camera();
     });
 
-    $('#submenu_post_all').click(function(){
-        // var patern = /.*post_all\.html$/g;
-        // var pathname: string = location.pathname;
-        // var found = pathname.match(patern);
-        // if(!found){
-        //     location.href = 'post_all.html';
-        // }
-        var checkMove: CheckMove = new CheckMove(/.*post_all\.html$/g, 'post_all.html');
+    $('#submenu_post_all').click(function(): void {
+        var checkMove: CurrentPageCheck = new CurrentPageCheck(/.*post_all\.html$/g, 'post_all.html');
         checkMove.move();
     });
 
-    $('#submenu_old_theme').click(function(){
-        // var patern = /.*old_theme\.html$/g;
-        // var pathname = location.pathname;
-        // var found = pathname.match(patern);
-        // if(!found){
-        //     location.href = 'old_theme.html';
-        // }
+    $('#submenu_old_theme').click(function(): void {
 
-        // var checkMove: CheckMove = new CheckMove(/.*old_theme\.html$/g, 'old_theme.html');
+        // var checkMove: CurrentPageCheck = new CurrentPageCheck(/.*old_theme\.html$/g, 'old_theme.html');
         // checkMove.move();
     });
 
-    $('#submenu_mypage').click(function(){
+    $('#submenu_mypage').click(function(): void {
         if(kamachare.util.toBool(window.localStorage.getItem(kamachare.localStoreKey.loggedIn))){
-            // var patern = /.*mypage\.html$/g;
-            // var pathname: string = location.pathname;
-            // var found = pathname.match(patern);
-            // if(!found){
-            //     location.href = 'mypage.html';
-            // }
-            var checkMove: CheckMove = new CheckMove(/.*mypage\.html$/g, 'mypage.html');
+            var checkMove: CurrentPageCheck = new CurrentPageCheck(/.*mypage\.html$/g, 'mypage.html');
             checkMove.move();
         }
     });
 
-    $('#submenu_about').click(function(){
-        // var patern = /.*about\.html$/g;
-        // var pathname: string = location.pathname;
-        // var found = pathname.match(patern);
-        // if(!found){
-        //     location.href = 'about.html';
-        // }
-        var checkMove: CheckMove = new CheckMove(/.*about\.html$/g, 'about.html');
+    $('#submenu_about').click(function(): void {
+        var checkMove: CurrentPageCheck = new CurrentPageCheck(/.*about\.html$/g, 'about.html');
         checkMove.move();
     });
 });

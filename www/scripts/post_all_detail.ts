@@ -1,11 +1,9 @@
-/// <reference path="./libs.ts" />
-
-$(function(){
+$(function(): void {
     var userPhotoRes: string = "img/003_post-all/post_sample_h.jpg";
     var yoisa_count: number = 0;
     var isYoisaClick: boolean = false;
 
-    $('#header_yoisa_button').click(function (){
+    $('#header_yoisa_button').click(function(): void {
         if(!isYoisaClick) {
             isYoisaClick = true;
             yoisa_count += 1;
@@ -15,10 +13,10 @@ $(function(){
         }
     });
 
-    (function setPostPhoto(){
+    (function setPostPhoto(): void {
         var width: number;
         var height: number;
-        var img = new Image();
+        var img: HTMLImageElement = new Image();
         img.src = userPhotoRes;
         width = img.width;
         height = img.height;
@@ -31,9 +29,9 @@ $(function(){
         $('#header_user_photo').attr('src', userPhotoRes);
     })();
 
-    $(window).load(function(){
+    $(window).load(function(): void {
         var isVisivleMap: boolean = true;
-        (function setMapHeight (isVisivle){
+        (function setMapHeight (isVisivle): void {
             var mapSection: string = '#map_section';
             isVisivle = isVisivle === undefined ? true : isVisivle;
             if(isVisivle){

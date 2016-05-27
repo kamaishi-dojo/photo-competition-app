@@ -1,7 +1,5 @@
-/// <reference path="./libs.ts" />
-
-$(function(){
-    $(window).load(function(){
+$(function(): void {
+    $(window).load(function(): void {
         $('article').css('padding-bottom', $('footer').outerHeight(true).toString() + 'px')
     });
 });

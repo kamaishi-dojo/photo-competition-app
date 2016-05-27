@@ -1,7 +1,5 @@
-/// <reference path="./libs.ts" />
-
-$(function(){
-    var permanentStorage = window.localStorage;
+$(function(): void {
+    var permanentStorage: Storage = window.localStorage;
     var userName: string = permanentStorage.getItem(kamachare.localStoreKey.userName);
     var email: string = permanentStorage.getItem(kamachare.localStoreKey.userEmail);
     var iconRes: string = permanentStorage.getItem(kamachare.localStoreKey.userIconSrc);
@@ -36,7 +34,7 @@ $(function(){
 
             kamachare.modal.open('#loading', false);
 
-            kamachare.util.fakeUpdate(function(){
+            kamachare.util.fakeUpdate(function(): void {
                 kamachare.modal.close('#loading',
                 function(): void{
                     kamachare.modal.open('#success', false);
@@ -48,7 +46,7 @@ $(function(){
                 });
             });
         }else{
-            alert(errorMessage);
+            navigator.notification.alert(errorMessage, function(): void{});
         }
     });
 

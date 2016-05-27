@@ -1,0 +1,60 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "outDir": "../js/",
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": false,
+        "noLib": false,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": true
+    },
+    "formatCodeOptions": {
+        "indentSize": 4,
+        "tabSize": 4,
+        "newLineCharacter": "\r\n",
+        "convertTabsToSpaces": true,
+        "insertSpaceAfterCommaDelimiter": true,
+        "insertSpaceAfterSemicolonInForStatements": true,
+        "insertSpaceBeforeAndAfterBinaryOperators": true,
+        "insertSpaceAfterKeywordsInControlFlowStatements": true,
+        "insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+        "insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+        "placeOpenBraceOnNewLineForFunctions": true,
+        "placeOpenBraceOnNewLineForControlBlocks": true
+    },
+    "compileOnSave": true,
+    "filesGlob": [
+        "./lib/**/*.ts",
+        "./lib/**/*.tsx",
+        "!./lib/**/*.d.ts",
+        "!./lib/cordova/plugins/*.d.ts",
+        "./*.ts",
+        "./*.tsx",
+        "!./*.d.ts"
+    ],
+    "files": [
+        "./about.ts",
+        "./api.ts",
+        "./camera.ts",
+        "./gbnav.ts",
+        "./home.ts",
+        "./index.ts",
+        "./key.ts",
+        "./login.ts",
+        "./map_util.ts",
+        "./modal_windows.ts",
+        "./mypage_edit.ts",
+        "./mypage.ts",
+        "./page.ts",
+        "./post_all_detail.ts",
+        "./post_all.ts",
+        "./post_thunb_img.ts",
+        "./post.ts",
+        "./util.ts"
+    ],
+    "atom": {
+        "rewriteTsconfig": true
+    }
+}
