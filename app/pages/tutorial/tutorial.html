@@ -1,0 +1,16 @@
+<ion-content padding class="tutorial">
+  <ion-slides #2ndSlide>
+    <ion-slide>
+      <img src="/img/000_tutorial/tut_img01.png" class="slide-image"/>
+      <h2 class="slide-title">ようこそ！</h2>
+      <p>このアプリは釜石まちづくり会社が運営する「縁とらんすフォトコンテンスト」にスマホで簡単に参加できます。<br>まずはアカウント登録してログインしましょう！</p>
+      <button large round (click)="goToSlide()">次へ</button>
+    </ion-slide>
+    <ion-slide>
+      <img src="/img/000_tutorial/tut_img01.png" class="slide-image"/>
+      <h2 class="slide-title">写真を投稿しよう！</h2>
+      <p>ログインが出来たら、テーマに沿った写真を撮影して投稿しましょう。<br>投稿した写真はコンテスト事務局がチェックした後に表示されます。</p>
+      <button large round (click)="goToHomePage()">つかってみる</button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
