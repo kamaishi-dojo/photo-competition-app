@@ -1,17 +1,14 @@
-<ion-navbar *navbar>
-  <ion-title>Home</ion-title>
-</ion-navbar>
-
-<ion-content padding class="page1">
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>app/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
-  <p>Want to learn some facts?  Click below.</p>
-  <button (click)="goToFactsPage()">Scientific Facts</button>
+<ion-content padding class="home">
+  <p><button clear light>
+      <ion-icon name='person'></ion-icon> マイページ <ion-icon name='arrow-forward'></ion-icon>
+  </button>
+ </p>
+<img src="/img/001_top/top_title.png"><br><br>
+<button block outline light large (click)="openActionPhotoDialog()"> <ion-icon name='camera'></ion-icon>写真を投稿</button>
+<button block outline light>みんなの投稿</button>
+<button block outline dark>過去のテーマ</button>
 </ion-content>
+
+<ion-toolbar position="bottom" class="home-footer-toolbar">
+  <ion-title>募集期間：2016年8月6日〜8月10日</ion-title>
+</ion-toolbar>

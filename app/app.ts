@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import {Platform, ionicBootstrap} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
-import {LaunchPage} from './pages/launch/launch';
 
+import {LaunchPage} from './pages/launch-page/launch-page';
 
 @Component({
   template: '<ion-nav [root]="rootPage"></ion-nav>'

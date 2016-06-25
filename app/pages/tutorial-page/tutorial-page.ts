@@ -1,15 +1,11 @@
 import {Component,ViewChild} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {Slides} from 'ionic-angular';
-import {HomePage} from '../home/home'
-/*
-  Generated class for the TutorialPage page.
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
+import {HomePage} from '../home-page/home-page'
+
 @Component({
-  templateUrl: 'build/pages/tutorial/tutorial.html',
+  templateUrl: 'build/pages/tutorial-page/tutorial-page.html',
 })
 export class TutorialPage {
   @ViewChild ('2ndSlide') slider: Slides;
